@@ -1,0 +1,8 @@
+Model Information:
+* title:	Concrete Statue (East Jesus)
+* source:	https://sketchfab.com/3d-models/concrete-statue-east-jesus-e71dd630874c4a9ab72042e3f1f3e8d8
+* author:	Austin Beaulier (https://sketchfab.com/Austin.Beaulier)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
