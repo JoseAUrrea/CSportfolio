@@ -17,7 +17,7 @@ export default function Home() {
       <div className="animated-background">
       <div className="flex flex-col items-center pt-[70px] z-20 pb-10">
         <div className="text-center">
-          <h1 className="text-[30px] font-bold"> 
+          <h1 className="text-[30px] font-bold md:pt-[70px] pt-[40px]"> 
             Computer Science 
           </h1>
           <p>Orlando, FL - Los Angeles, CA</p>
