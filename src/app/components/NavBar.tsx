@@ -13,6 +13,8 @@ const NavBar = () => {
     const buttonRef = useRef<HTMLButtonElement>(null);
 
     useOutsideClick(dropdownRef, () => setIsDropdownOpen(false), buttonRef);
+
+    const closeDropdown = () => setIsDropdownOpen(false);
     return (
         <>
             <div className = "fixed flex justify-between h-[60px] border-b border-cyan-200 z-20 w-full bg-inherit px-2">
@@ -22,10 +24,10 @@ const NavBar = () => {
                     </Link>
                 </div>
                 <div className = "flex items-center">
-                    <div className="rounded px-2">
+                    <div className="rounded px-2 hidden md:flex">
                         <Link href="/"
                         >
-                            <IoHomeOutline className="w-[30px] h-[30px]"/>
+                            <IoHomeOutline className="md:w-[30px] md:h-[30px] w-[20px] h-[20px]"/>
                         </Link>
                     </div>
                     <div className="rounded px-2">
@@ -33,7 +35,7 @@ const NavBar = () => {
                             target="_blank"
                             href="https://www.linkedin.com/in/jose-urrea-profile"
                         >
-                            <CiLinkedin className="w-[40px] h-[40px]"/>
+                            <CiLinkedin className="md:w-[40px] md:h-[40px] w-[30px] h-[30px]"/>
                         </a>
                     </div>
                     <div className="rounded px-2">
@@ -41,7 +43,7 @@ const NavBar = () => {
                             target="_blank"
                             href="https://www.github.com/JoseAUrrea/"
                         >
-                            <FaGithub className="w-[30px] h-[30px]"/>
+                            <FaGithub className="md:w-[30px] md:h-[30px] w-[23px] h-[23px]"/>
                         </a>
                     </div>
                     <div className="flex items-center">
@@ -50,16 +52,16 @@ const NavBar = () => {
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         className="rounded px-2"
                     >
-                        <RxDropdownMenu className="w-[35px] h-[35px] md:ml-2 "/>
+                        <RxDropdownMenu className="md:w-[35px] md:h-[35px] md:ml-2 w-[28px] h-[28px]"/>
                     </button>
                 </div>
                 {isDropdownOpen && (
                         <div ref={dropdownRef} className="absolute right-5 w-40 y-5 bg-gray-500 bg-opacity-100 shadow-md rounded top-[60px]">
-                            <a href="#about" className="block px-4 py-2 hover:bg-gray-700">About</a>
-                            <a href="#technologies" className="block px-4 py-2 hover:bg-gray-700">Technologies</a>
-                            <a href="#projects" className="block px-4 py-2 hover:bg-gray-700">Projects</a>
-                            <a href="#education" className=" block px-4 py-2 hover:bg-gray-700">Education</a>
-                            <a href="#contact" className="block px-4 py-2 hover:bg-gray-700">Contact</a>
+                            <a href="#about" onClick={closeDropdown} className="block px-4 py-2 hover:bg-gray-700 text-white">About</a>
+                            <a href="#technologies" onClick={closeDropdown} className="block px-4 py-2 hover:bg-gray-700 text-white">Technologies</a>
+                            <a href="#projects" onClick={closeDropdown} className="block px-4 py-2 hover:bg-gray-700 text-white">Projects</a>
+                            <a href="#education" onClick={closeDropdown} className=" block px-4 py-2 hover:bg-gray-700 text-white">Education</a>
+                            <a href="#contact" onClick={closeDropdown} className="block px-4 py-2 hover:bg-gray-700 text-white">Contact</a>
                         </div>
                     )}
                 </div>

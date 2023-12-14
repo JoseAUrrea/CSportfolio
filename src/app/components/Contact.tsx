@@ -1,7 +1,7 @@
 import { SiMinutemailer } from "react-icons/si";
 const Contact = () => {
     return (
-        <div className="flex flex-col items-center justify-center pb-10 w-full">
+        <div className="flex flex-col items-center justify-center pb-16 pt-16 w-full">
             <h1 className="text-[20px]">
                 Contact
             </h1>

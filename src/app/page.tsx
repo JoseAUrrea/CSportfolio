@@ -20,12 +20,14 @@ export default function Home() {
           <h1 className="text-[30px] font-bold"> 
             Computer Science 
           </h1>
-          <p>Information, Designs, and Applications</p>
+          <p>Orlando, FL - Los Angeles, CA</p>
         </div>
         <Model />
 
+        <p className='pb-6'>Information, Designs, and Applications</p>
+
         <nav className="flex justify-center pb-10 z-20 ">
-          <a href="#about" className="tab rounded py-2 md:px-3 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">About</a>
+          <a href="#about" className="tab rounded py-2 md:px-3 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black ">About</a>
           <a href="#technologies" className="tab rounded md:px-3 px-1 py-2 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Technologies</a>
           <a href="#projects" className="tab rounded py-2 md:px-3 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Projects</a>
           <a href="#education" className="tab rounded py-2 md:px-3 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Education</a>
@@ -34,9 +36,14 @@ export default function Home() {
 
         <div id="about" className="-mt-[100px] pt-[100px]"><About /></div>
         <div id="technologies" className="-mt-[100px] pt-[100px]"><Technologies techList={techs} /></div>
+        <div className='animated-background w-full'>
         <div id="projects" className="-mt-[100px] pt-[100px]"><Projects /></div>
+        </div>
+        <div className='animated-background w-full h-full'>
         <div id="education" className="-mt-[100px] pt-[100px]"><Education /></div>
         <div id="contact" className="-mt-[100px] pt-[100px]"><Contact /></div>
+        <div className='h-[200px]'></div>
+        </div>
       </div>
       </div>
   )

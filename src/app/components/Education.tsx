@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const Education = () => {
     return (
-        <div className = "flex flex-col items-center justify-center px-4 pb-10">
+        <div className = "flex flex-col items-center justify-center px-4 pt-16">
             <h1 className = "text-[20px] font-bold pb-2">
                 Education
             </h1>
-            <div className = "flex flex-col md:flex-row gap-4 items-center md:items-start">
+            <div className = "flex flex-col md:flex-row gap-4 items-center md:items-start pb-16 border-b border-gray-300">
                 <div className = "rounded-full border-gray-500 border overflow-hidden">
                     <Image
                         src = "/images/ucf.jpeg"
@@ -17,7 +17,7 @@ const Education = () => {
                     >
                     </Image>
                 </div>
-                <div className = "flex-1 max-w-[700px] border border-cyan-200 rounded-t-xl p-4 bg-gray-700 bg-opacity-25">
+                <div className = " flex-1 max-w-[700px] border border-cyan-200 rounded-t-xl p-4 bg-gray-700 bg-opacity-25">
                     <h1 className = "text-[20px] font-bold">
                         University of Central Florida - Orlando, FL
                     </h1>
@@ -63,6 +63,16 @@ const Education = () => {
                             <li>C SoloLearn Course - Credential ID: 1089-17174398</li>
                             <li>HTML SoloLearn Course - Credential ID: 1014-17174398</li>
                             <li>Microsoft Office Softwares High School Course</li>
+                        </ul>
+                    </span>
+                    <h1 className = "text-[20px] font-bold pt-4">
+                        Languages
+                    </h1>
+                    <span className="text-[14px]">
+                        <ul className="list-disc list-inside">
+                            <li>English - Native</li>
+                            <li>Spanish - Native</li>
+                            <li>French - intermediate</li>
                         </ul>
                     </span>
                     <h1 className = "text-[20px] font-bold pt-4">

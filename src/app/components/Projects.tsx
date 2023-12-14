@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const Projects = () => {
     return (
-        <div className="flex flex-col items-center justify-center pb-10">
+        <div className=" rounded flex flex-col items-center justify-center pt-16 ">
             <h1 className = "text-[20px] pb-4">
                 Projects
             </h1>
-            <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:pr-6">
+            <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:pr-6 pb-16 border-b border-gray-300">
                 <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <p className="text-tiny uppercase font-bold">Compete</p>
