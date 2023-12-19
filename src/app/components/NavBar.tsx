@@ -20,7 +20,7 @@ const NavBar = () => {
             <div className = "fixed flex justify-between h-[60px] border-b border-cyan-200 z-20 w-full bg-inherit px-2">
                 <div className="rounded pt-4 px-2 text-[16px]">
                     <Link href="/">
-                        Jose Urrea
+                        Jose Alejandro Urrea
                     </Link>
                 </div>
                 <div className = "flex items-center">

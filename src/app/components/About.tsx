@@ -20,7 +20,7 @@ const About = () => {
                 <div className = "flex-1 max-w-[700px] border border-cyan-200 rounded-t-xl p-4 bg-gray-700 bg-opacity-25">
                     <div>
                         Welcome to my portfolio!
-                        My name is Jose Urrea and I attended the University of Central Florida. 
+                        My name is Jose Alejandro Urrea and I attended the University of Central Florida. 
                         I recently graduated with a Bachelor's degree in Computer Science in December 2023.
                         I have experience with full stack development, database management, cloud computing, machine learning, artificial intellegence, robot vision and more.
                         I am a native Spanish and English speaker and I am currently learning French.
