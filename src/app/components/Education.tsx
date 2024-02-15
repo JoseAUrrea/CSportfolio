@@ -55,12 +55,21 @@ const Education = () => {
                         </div>
                     </h2>
                     <h1 className = "text-[20px] font-bold pt-4">
+                        Acknowledgements
+                    </h1>
+                    <span className="text-[14px]">
+                        <ul className="list-disc list-inside">
+                            <li>Multiple Dean's List </li>
+                        </ul>
+                    </span>
+                    <h1 className = "text-[20px] font-bold pt-4">
                         Certifications
                     </h1>
                     <span className="text-[14px]">
                         <ul className="list-disc list-inside">
                             <li>Google Technical Support Fundamentals - Credential ID: TLX57328BEV8</li>
                             <li>C SoloLearn Course - Credential ID: 1089-17174398</li>
+                            <li>C# SoloLearn Course - Credential ID: CC-05QRQ2WY</li>
                             <li>HTML SoloLearn Course - Credential ID: 1014-17174398</li>
                             <li>Microsoft Office Softwares High School Course</li>
                         </ul>

@@ -8,10 +8,11 @@ import Contact from './components/Contact';
 
 export default function Home() {
 
-  const techs = ["React", "Next.js", "Vue", "TypeScript", "JavaScript", 
+  const techs = ["React", "Angular", "Vue", "Bootstrap", "Next.js", "Node.js", "TypeScript", "JavaScript", 
                 "Python", "Java", "C", "C#", "C++", "Swift", "SQL", "MongoDB", 
                 "PHP", "HTML", "CSS", "TailwindCSS", "APIs", "AWS", "Azure",
-                "Agile", "Scrum", "Git", "Jira", "Docker"
+                "Agile", "Scrum", "Git", "Jira", "Docker", "Kubernetes", "CI/CD",
+                
               ];
   return (
       <div className="animated-background">
