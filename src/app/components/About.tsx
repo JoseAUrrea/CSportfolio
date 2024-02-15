@@ -28,7 +28,7 @@ const About = () => {
                         <br></br>
 
                         <p className="indent-5">
-                            In my most recent experience, I led the back-end development for a fully responsive web application, focusing on optimizing loading times, maintaining data integrity, and enhancing social networking features through algorithm design. 
+                            In my most recent experience, I led the back-end development for a fully responsive web application, focusing on API routing, optimizing loading times, maintaining data integrity, and enhancing social networking features through algorithm design. 
                             Leveraging AWS S3, API Gateway, MySQL RDS, Prisma ORM, TypeScript, and Lambda functions, I ensured performance and scalability while delivering impactful solutions. 
                         </p>
 
