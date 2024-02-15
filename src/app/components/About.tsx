@@ -22,7 +22,9 @@ const About = () => {
                         Welcome to my portfolio!
                         My name is Jose Alejandro Urrea and I attended the University of Central Florida. 
                         I recently graduated with a Bachelor's degree in Computer Science in December 2023.
-                        I have experience with full stack development, database management, cloud computing, machine learning, artificial intellegence, robot vision and more.
+                        In my most recent experience, I led backend development for a fully responsive web application, focusing on optimizing loading times, maintaining data integrity, and enhancing social networking features through algorithm design. 
+                        Leveraging AWS S3, API Gateway, MySQL RDS, Prisma ORM, TypeScript, and Lambda functions, I ensured performance and scalability while delivering impactful solutions. 
+                        During development my team and I made sure to record our designs and implementations through thorough documentation.
                         I am a native Spanish and English speaker and I am currently learning French.
                         My goal is to take my experience, knowledge, and skills and apply it to a dynamic workplace.
                         By doing so I hope to continue my growth as a developer and contribute to your company goals.
