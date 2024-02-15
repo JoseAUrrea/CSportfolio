@@ -19,15 +19,38 @@ const About = () => {
                 </div>
                 <div className = "flex-1 max-w-[700px] border border-cyan-200 rounded-t-xl p-4 bg-gray-700 bg-opacity-25">
                     <div>
-                        Welcome to my portfolio!
-                        My name is Jose Alejandro Urrea and I attended the University of Central Florida. 
-                        I recently graduated with a Bachelor's degree in Computer Science in December 2023.
-                        In my most recent experience, I led backend development for a fully responsive web application, focusing on optimizing loading times, maintaining data integrity, and enhancing social networking features through algorithm design. 
-                        Leveraging AWS S3, API Gateway, MySQL RDS, Prisma ORM, TypeScript, and Lambda functions, I ensured performance and scalability while delivering impactful solutions. 
-                        During development my team and I made sure to record our designs and implementations through thorough documentation.
-                        I am a native Spanish and English speaker and I am currently learning French.
-                        My goal is to take my experience, knowledge, and skills and apply it to a dynamic workplace.
-                        By doing so I hope to continue my growth as a developer and contribute to your company goals.
+                        <p className="indent-5">
+                            Welcome to my portfolio!
+                            I attended the University of Central Florida and recently graduated with a Bachelor's degree in Computer Science in December 2023.
+                            I am fluent in both English and Spanish while also having an intermediate understanding of French.
+                        </p>
+
+                        <br></br>
+
+                        <p className="indent-5">
+                            In my most recent experience, I led the back-end development for a fully responsive web application, focusing on optimizing loading times, maintaining data integrity, and enhancing social networking features through algorithm design. 
+                            Leveraging AWS S3, API Gateway, MySQL RDS, Prisma ORM, TypeScript, and Lambda functions, I ensured performance and scalability while delivering impactful solutions. 
+                        </p>
+
+                        <br></br>
+
+                        <p className="indent-5">
+                            During development my team and I made sure to record our designs and implementations through thorough documentation.
+                            To manage the development lifecycle, we utilized Agile methodologies and Jira to track our progress and maintain a consistent workflow.
+                        </p>
+
+                        <br></br>
+
+                        <p className="indent-5">
+                        Throughout various projects, including those involving machine learning, robot vision, and artificial intelligence, I've honed my skills in backend development, database management, and UI/UX design integration.
+                        </p>
+
+                        <br></br>
+
+                        <p className="indent-5">
+                            My goal is to take my experience, knowledge, and skills and apply it to a dynamic workplace.
+                            By doing so I hope to continue my growth as a developer and contribute to your company goals.
+                        </p>
                     </div>
                 </div>
             </div>
