@@ -20,7 +20,7 @@ export default function Home() {
           <h1 className="text-[30px] font-bold md:pt-[70px] pt-[40px]"> 
             Computer Science 
           </h1>
-          <p>Orlando, FL - Los Angeles, CA</p>
+          <p>Los Angeles, CA</p>
         </div>
         <Model />
 

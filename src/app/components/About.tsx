@@ -42,7 +42,7 @@ const About = () => {
                         <br></br>
 
                         <p className="indent-5">
-                        Throughout various projects, including those involving machine learning, robot vision, and artificial intelligence, I've honed my skills in backend development, database management, and UI/UX design integration.
+                        Throughout various projects, including those involving full-stack development, machine learning, robot vision, and artificial intelligence, I've honed my skills in backend development, database management, UI/UX design integration, data analysis, neural network architectures and more.
                         </p>
 
                         <br></br>
