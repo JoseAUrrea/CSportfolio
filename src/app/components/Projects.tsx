@@ -15,7 +15,7 @@ const Projects = () => {
                     <p className="text-tiny uppercase font-bold">Compete</p>
                     <h4 className="font-bold text-large">A virtual sports & social media app built for a client</h4>
                     <small className="text-default-500">NextJS, React, Typescript, Tailwind CSS, MySQL, & AWS</small>
-                    <small className="text-default-500">My Roles: Database, Backend, Frontend</small>
+                    <small className="text-default-500">My Roles: Database & Backend</small>
                     <small className="text-default-500">* Do not own access to repository</small>
                 </CardHeader>
                 <CardBody className="overflow-visible py-2 px-1 items-center">
@@ -23,6 +23,28 @@ const Projects = () => {
                     alt="Card background"
                     className="object-cover rounded-xl"
                     src="/images/compete.jpeg"
+                    width={400}
+                    />
+                </CardBody>
+                </Card>
+
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                    <a
+                        target="_blank"
+                        href="https://github.com/JoseAUrrea/ecommerce"
+                    >
+                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">TheMarket</p>
+                    </a>
+                    <h4 className="font-bold text-large">An ecommerce site to shop for what you need</h4>
+                    <small className="text-default-500">Python, Django, HTML, SQLite, CSS, & JavaScript</small>
+                    <small className="text-default-500">My Roles: Full Stack</small>
+                </CardHeader>
+                <CardBody className="overflow-visible py-2 px-1 items-center">
+                    <Image
+                    alt="Card background"
+                    className="object-cover rounded-xl"
+                    src="/images/ecommerce.jpg"
                     width={400}
                     />
                 </CardBody>
