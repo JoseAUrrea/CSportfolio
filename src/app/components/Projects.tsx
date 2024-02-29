@@ -54,6 +54,28 @@ const Projects = () => {
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
+                        href="https://github.com/JoseAUrrea/Equine-Experience"
+                    >
+                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Ocala Equine Experience</p>
+                    </a>
+                    <h4 className="font-bold text-large">Book your perfect stay with this website</h4>
+                    <small className="text-default-500">HTML, CSS, Javascript, Bootstrap</small>
+                    <small className="text-default-500">My Role: Frontend</small>
+                </CardHeader>
+                <CardBody className="overflow-visible py-2 px-1 items-center">
+                    <Image
+                    alt="Card background"
+                    className="object-cover rounded-xl"
+                    src="/images/equine.jpg"
+                    width={375}
+                    />
+                </CardBody>
+                </Card>
+
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                    <a
+                        target="_blank"
                         href="https://github.com/JoseAUrrea/pt-gpt"
                     >
                     <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Personal Trainer GPT</p>
@@ -76,6 +98,28 @@ const Projects = () => {
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
+                        href="https://github.com/JoseAUrrea/bingo"
+                    >
+                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Bingo</p>
+                    </a>
+                    <h4 className="font-bold text-large">An online bingo game</h4>
+                    <small className="text-default-500">React, HTML, CSS, Javascript</small>
+                    <small className="text-default-500">My Role: Individual </small>
+                </CardHeader>
+                <CardBody className="overflow-visible py-2 px-1 items-center">
+                    <Image
+                    alt="Card background"
+                    className="object-cover rounded-xl"
+                    src="/images/bingo.jpg"
+                    width={370}
+                    />
+                </CardBody>
+                </Card>
+
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                    <a
+                        target="_blank"
                         href="https://github.com/JoseAUrrea/canny"
                     >
                     <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Canny Edge Detector</p>
@@ -90,6 +134,28 @@ const Projects = () => {
                     className="object-cover rounded-xl"
                     src="/images/cannypt2.jpg"
                     width={250}
+                    />
+                </CardBody>
+                </Card>
+
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                    <a
+                        target="_blank"
+                        href="https://github.com/JoseAUrrea/puzzle"
+                    >
+                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Puzzles</p>
+                    </a>
+                    <h4 className="font-bold text-large">A draggable and sliding puzzle</h4>
+                    <small className="text-default-500">HTML, CSS, Javascript, JQuery </small>
+                    <small className="text-default-500">Individual</small>
+                </CardHeader>
+                <CardBody className="overflow-visible py-2 px-1 items-center">
+                    <Image
+                    alt="Card background"
+                    className="object-cover rounded-xl"
+                    src="/images/puzzle.jpg"
+                    width={350}
                     />
                 </CardBody>
                 </Card>
