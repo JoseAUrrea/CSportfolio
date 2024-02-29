@@ -98,20 +98,20 @@ const Projects = () => {
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
-                        href="https://github.com/JoseAUrrea/bingo"
+                        href="https://github.com/JoseAUrrea/puzzle"
                     >
-                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Bingo</p>
+                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Puzzles</p>
                     </a>
-                    <h4 className="font-bold text-large">An online bingo game</h4>
-                    <small className="text-default-500">React, HTML, CSS, Javascript</small>
-                    <small className="text-default-500">My Role: Individual </small>
+                    <h4 className="font-bold text-large">A draggable and sliding puzzle</h4>
+                    <small className="text-default-500">HTML, CSS, Javascript, JQuery </small>
+                    <small className="text-default-500">Individual</small>
                 </CardHeader>
                 <CardBody className="overflow-visible py-2 px-1 items-center">
                     <Image
                     alt="Card background"
                     className="object-cover rounded-xl"
-                    src="/images/bingo.jpg"
-                    width={370}
+                    src="/images/puzzle.jpg"
+                    width={350}
                     />
                 </CardBody>
                 </Card>
@@ -142,20 +142,20 @@ const Projects = () => {
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
-                        href="https://github.com/JoseAUrrea/puzzle"
+                        href="https://github.com/JoseAUrrea/bingo"
                     >
-                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Puzzles</p>
+                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Bingo</p>
                     </a>
-                    <h4 className="font-bold text-large">A draggable and sliding puzzle</h4>
-                    <small className="text-default-500">HTML, CSS, Javascript, JQuery </small>
-                    <small className="text-default-500">Individual</small>
+                    <h4 className="font-bold text-large">An online bingo game</h4>
+                    <small className="text-default-500">React, HTML, CSS, Javascript</small>
+                    <small className="text-default-500">My Role: Individual </small>
                 </CardHeader>
                 <CardBody className="overflow-visible py-2 px-1 items-center">
                     <Image
                     alt="Card background"
                     className="object-cover rounded-xl"
-                    src="/images/puzzle.jpg"
-                    width={350}
+                    src="/images/bingo.jpg"
+                    width={370}
                     />
                 </CardBody>
                 </Card>
