@@ -7,6 +7,7 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import { CiLocationOn } from "react-icons/ci";
 import { AiTwotoneCode } from "react-icons/ai";
+import FlipCard from './components/FlipCard';
 
 export default function Home() {
 
@@ -55,6 +56,8 @@ export default function Home() {
           />
         </div>
 
+        {/* <FlipCard /> */}
+
 
 
         <p className='flex items-center pb-6 mt-10 text-[25px]'>
@@ -62,13 +65,17 @@ export default function Home() {
           <span className='ml-2 text-[25px]'>Los Angeles, CA</span>
         </p>
 
-        <nav className="flex justify-center mt-10 pb-10 z-20 ">
-          <a href="#about" className="tab rounded py-2 md:px-3 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black ">About</a>
-          <a href="#technologies" className="tab rounded md:px-3 px-1 py-2 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Technologies</a>
-          <a href="#projects" className="tab rounded py-2 md:px-3 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Projects</a>
-          <a href="#education" className="tab rounded py-2 md:px-3 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Education</a>
-          <a href="#contact" className="tab rounded py-2 md:px-3 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Contact</a>
+        <nav className="flex justify-center mt-10 pb-20 z-20 border-b border-gray-300 mb-20">
+
+          <div className=''>
+          <a href="#about" className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black ">About</a>
+          <a href="#technologies" className="tab rounded md:px-6 px-1 py-2 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Technologies</a>
+          <a href="#projects" className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Projects</a>
+          <a href="#education" className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Education</a>
+          <a href="#contact" className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black">Contact</a>
+          </div>
         </nav>
+        
 
         <div id="about" className="-mt-[100px] pt-[100px]"><About /></div>
         <div id="technologies" className="-mt-[100px] pt-[100px]"><Technologies techList={techs} /></div>

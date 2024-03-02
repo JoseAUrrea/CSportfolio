@@ -95,3 +95,35 @@ body {
   margin-top: -70px;
   padding-top: 70px; 
 }
+
+.gradient-bg {
+  background: linear-gradient(180deg, #0181ac, #09b2ea);
+}
+
+
+.flippable-image-card {
+  position: relative;
+  width: 500px; /* Adjust as needed */
+  height: 300px; /* Adjust as needed */
+  perspective: 1000px; /* Create perspective for 3D effect */
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide back side of the card */
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Initially, hide the back side */
+}
+
+.flipped .card-front {
+  transform: rotateY(180deg); /* Rotate the front side when flipped */
+}
+
+.flipped .card-back {
+  transform: rotateY(0); /* Rotate the back side when flipped */
+}
