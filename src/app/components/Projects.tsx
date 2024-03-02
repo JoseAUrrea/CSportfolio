@@ -5,12 +5,12 @@ import Link from "next/link";
 const Projects = () => {
     return (
         <div className=" rounded flex flex-col items-center justify-center pt-16 ">
-            <h1 className = "text-[20px] font-bold pb-2">
+            <h1 className = "text-[25px] font-bold pb-2">
                 Projects
             </h1>
             <p className="pb-4">Click on the titles to reach the repository</p>
             <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 md:pr-6 pb-16 border-b border-gray-300">
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <p className="text-tiny uppercase font-bold">Compete</p>
                     <h4 className="font-bold text-large">A virtual sports & social media app built for a client</h4>
@@ -28,7 +28,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -50,7 +50,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -72,7 +72,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -94,7 +94,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -116,7 +116,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -138,7 +138,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -160,7 +160,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -182,7 +182,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -204,7 +204,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -226,7 +226,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"
@@ -248,7 +248,7 @@ const Projects = () => {
                 </CardBody>
                 </Card>
 
-                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:brightness-150 bg-opacity-25 rounded-lg">
+                <Card className="py-2 px-1 md:w-[400px] w-[350px] bg-gray-600 hover:bg-opacity-40 bg-opacity-25 rounded-lg">
                 <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                     <a
                         target="_blank"

@@ -17,17 +17,17 @@ const NavBar = () => {
     const closeDropdown = () => setIsDropdownOpen(false);
     return (
         <>
-            <div className = "fixed flex justify-between h-[60px] border-b border-cyan-200 z-20 w-full bg-inherit px-2">
-                <div className="rounded pt-4 px-2 text-[16px]">
+            <div className = "fixed flex items-center justify-between h-[60px] border-b border-slate-200 z-20 w-full bg-black px-2">
+                <div className="rounded px-2 text-[16px] text-white">
                     <Link href="/">
-                        Jose Alejandro Urrea
+                        Portfolio
                     </Link>
                 </div>
                 <div className = "flex items-center">
                     <div className="rounded px-2 hidden md:flex">
                         <Link href="/"
                         >
-                            <IoHomeOutline className="md:w-[30px] md:h-[30px] w-[20px] h-[20px]"/>
+                            <IoHomeOutline className="md:w-[30px] md:h-[30px] w-[20px] h-[20px] text-white"/>
                         </Link>
                     </div>
                     <div className="rounded px-2">
@@ -35,7 +35,7 @@ const NavBar = () => {
                             target="_blank"
                             href="https://www.linkedin.com/in/jose-urrea-profile"
                         >
-                            <CiLinkedin className="md:w-[40px] md:h-[40px] w-[30px] h-[30px]"/>
+                            <CiLinkedin className="md:w-[40px] md:h-[40px] w-[30px] h-[30px] text-white"/>
                         </a>
                     </div>
                     <div className="rounded px-2">
@@ -43,7 +43,7 @@ const NavBar = () => {
                             target="_blank"
                             href="https://www.github.com/JoseAUrrea/"
                         >
-                            <FaGithub className="md:w-[30px] md:h-[30px] w-[23px] h-[23px]"/>
+                            <FaGithub className="md:w-[30px] md:h-[30px] w-[23px] h-[23px] text-white"/>
                         </a>
                     </div>
                     <div className="flex items-center">
@@ -52,7 +52,7 @@ const NavBar = () => {
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                         className="rounded px-2"
                     >
-                        <RxDropdownMenu className="md:w-[35px] md:h-[35px] md:ml-2 w-[28px] h-[28px]"/>
+                        <RxDropdownMenu className="md:w-[35px] md:h-[35px] md:ml-2 w-[28px] h-[28px] text-white"/>
                     </button>
                 </div>
                 {isDropdownOpen && (

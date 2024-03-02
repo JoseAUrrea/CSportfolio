@@ -36,7 +36,6 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
-
 }
 
 .animated-background {
@@ -44,12 +43,13 @@ body {
   min-height: 100vh;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-    to bottom right,
+    to bottom left,
     rgb(var(--background-start-rgb)),
     rgb(var(--background-end-rgb))
   );
   overflow: hidden;
   z-index:1;
+  background-repeat: repeat-y;
 }
 
 .animated-background::before, .animated-background::after {
