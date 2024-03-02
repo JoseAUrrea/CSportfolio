@@ -72,7 +72,7 @@ export default function Home() {
 
         <div id="about" className="-mt-[100px] pt-[100px]"><About /></div>
         <div id="technologies" className="-mt-[100px] pt-[100px]"><Technologies techList={techs} /></div>
-        <div className='animated-background w-full'>
+        <div className='animated-background w-full h-full'>
         <div id="projects" className="-mt-[100px] pt-[100px]"><Projects /></div>
         </div>
         <div className='animated-background w-full h-full'>
