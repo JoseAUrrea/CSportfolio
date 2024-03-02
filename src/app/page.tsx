@@ -43,19 +43,16 @@ export default function Home() {
         <hr></hr>
 
 
-        <div className="flex justify-center items-center relative">
-          <div className = "overflow-hidden w-2/3">
+        <div className="flex justify-center items-center relative max-w-[400px]">
           <Image
             src="/images/grad2.jpeg"
             alt="Picture of the author"
             objectFit="cover"
             layout="responsive"
             className="rounded-xl"
-            width={700}
-            height={500}
+            width={500}
+            height={300}
           />
-
-          </div>
         </div>
 
 
