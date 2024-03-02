@@ -34,7 +34,7 @@ const Projects = () => {
                         target="_blank"
                         href="https://github.com/JoseAUrrea/ecommerce"
                     >
-                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">TheMarket</p>
+                    <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">The Market</p>
                     </a>
                     <h4 className="font-bold text-large">An ecommerce site to shop for what you need</h4>
                     <small className="text-default-500">Python, Django, HTML, SQLite, CSS, & JavaScript</small>
@@ -168,7 +168,7 @@ const Projects = () => {
                     >
                     <p className="text-tiny uppercase font-bold underline underline-offset-2 hover:text-blue-700">Olympic Medal Predictor</p>
                     </a>
-                    <h4 className="font-bold text-large">Uses data from previous olympics and predicts how many medals each country will earn at the next Olympics</h4>
+                    <h4 className="font-bold text-large">Uses data from previous Olympics and predicts how many medals each country will earn at the next Olympics</h4>
                     <small className="text-default-500">Python - Machine Learning</small>
                     <small className="text-default-500">Individual</small>
                 </CardHeader>
