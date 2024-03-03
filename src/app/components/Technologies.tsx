@@ -11,7 +11,7 @@ const Technologies = ({ techList }: TechListTypes) => {
     return (
         <div className="flex flex-col items-center px-4 pt-16 max-w-[900px]">
             
-            <h1 className="text-[25px] font-bold pb-2 mb-6">
+            <h1 className="text-[27px] font-bold pb-2 mb-6">
                 Technologies
             </h1>
             
@@ -19,7 +19,7 @@ const Technologies = ({ techList }: TechListTypes) => {
             <h2 className="text-[20px]">and Frameworks</h2>
             <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-6 pb-16 border-gray-300 w-full"> 
             {programmingLanguagesAndFrameworks.map((tech, index) => (
-                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg">
+                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg opacity-80">
                     <CardBody className="flex items-center justify-center">
                         <p className = "text-slate-200">{tech}</p>
                     </CardBody>
@@ -30,7 +30,7 @@ const Technologies = ({ techList }: TechListTypes) => {
             <h2 className="text-[20px]">Backend and Database</h2>
             <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-6 pb-16 border-gray-300 w-full"> 
             {backendAndDatabases.map((tech, index) => (
-                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg">
+                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg opacity-80">
                     <CardBody className="flex items-center justify-center">
                         <p className = "text-slate-200">{tech}</p>
                     </CardBody>
@@ -41,7 +41,7 @@ const Technologies = ({ techList }: TechListTypes) => {
             <h2 className="text-[20px]">DevOps and Cloud</h2>
             <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-6 pb-16 border-gray-300 w-full"> 
             {devOpsAndCloud.map((tech, index) => (
-                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg">
+                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg opacity-80">
                     <CardBody className="flex items-center">
                         <p className = "text-slate-200">{tech}</p>
                     </CardBody>
@@ -52,7 +52,7 @@ const Technologies = ({ techList }: TechListTypes) => {
             <h2 className="text-[20px]">Project Design and Methodologies</h2>
             <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-6 pb-16 border-gray-300 w-full"> 
             {projectDesignAndMethodologies.map((tech, index) => (
-                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg">
+                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg opacity-80">
                     <CardBody className="flex items-center">
                         <p className = "text-slate-200">{tech}</p>
                     </CardBody>
@@ -63,7 +63,7 @@ const Technologies = ({ techList }: TechListTypes) => {
             <h2 className="text-[20px]">Design and Multimedia</h2>
             <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-6 pb-16 border-b border-gray-300 w-full"> 
             {designAndMultimedia.map((tech, index) => (
-                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg">
+                <Card key={index} className="max-w-[450px] my-2 hover:animate-bounce rounded-2xl px-6 py-2 gradient-bg opacity-80">
                     <CardBody className="flex items-center">
                         <p className = "text-slate-200">{tech}</p>
                     </CardBody>

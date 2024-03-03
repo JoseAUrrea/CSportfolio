@@ -3,7 +3,7 @@ import Image from "next/image";
 const Education = () => {
     return (
         <div className = "flex flex-col items-center justify-center px-4 pt-16">
-            <h1 className = "text-[25px] font-bold pb-2">
+            <h1 className = "text-[27px] font-bold pb-2">
                 Education
             </h1>
             <div className = "flex flex-col md:flex-row gap-4 items-center md:items-start pb-16 border-b border-gray-300">

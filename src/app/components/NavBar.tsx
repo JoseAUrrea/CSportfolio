@@ -18,7 +18,7 @@ const NavBar = () => {
     return (
         <>
             <div className = "fixed flex items-center justify-between h-[60px] border-b border-slate-200 z-20 w-full bg-black px-2">
-                <div className="rounded px-2 text-[16px] text-white">
+                <div className="rounded px-2 text-[20px] text-white">
                     <Link href="/">
                         Portfolio
                     </Link>
