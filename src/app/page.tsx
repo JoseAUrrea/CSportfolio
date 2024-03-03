@@ -7,7 +7,6 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import { CiLocationOn } from "react-icons/ci";
 import { AiTwotoneCode } from "react-icons/ai";
-import FlipCard from './components/FlipCard';
 
 export default function Home() {
 
@@ -78,7 +77,9 @@ export default function Home() {
         
 
         <div id="about" className="-mt-[100px] pt-[100px]"><About /></div>
+        <div className='animated-background w-full h-full flex flex-col justify-center items-center'>
         <div id="technologies" className="-mt-[100px] pt-[100px]"><Technologies techList={techs} /></div>
+        </div>
         <div className='animated-background w-full h-full'>
         <div id="projects" className="-mt-[100px] pt-[100px]"><Projects /></div>
         </div>
