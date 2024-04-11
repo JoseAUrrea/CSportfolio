@@ -30,7 +30,7 @@ export default function Home() {
             </h1>
             </div>
             <p className="flex items-center text-[30px] mb-10">
-              <span>a Full Stack Developer</span>
+              <span>a Full Stack Engineer</span>
               <AiTwotoneCode className="ml-2 inline-block" size={30} />
             </p>
           </div>
