@@ -22,7 +22,7 @@ const Education = () => {
                         University of Central Florida - Orlando, FL
                     </h1>
                     <h2>
-                        Bachelor of Science in Computer Science - December 2023
+                        Bachelor of Science in Computer Science
                     </h2>
                     <h2 className="text-[16px]">
                         GPA: 3.0
