@@ -12,7 +12,7 @@ const About = () => {
                     <div>
                         <p className="indent-5">
                             Welcome to my portfolio!
-                            I attended the University of Central Florida and recently graduated with a Bachelor's degree in Computer Science in December 2023.
+                            I attended the University of Central Florida and graduated with a Bachelor's degree in Computer Science.
                             I am fluent in both English and Spanish while also having an intermediate understanding of French.
                         </p>
 
