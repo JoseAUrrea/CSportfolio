@@ -24,9 +24,6 @@ const Education = () => {
                     <h2>
                         Bachelor of Science in Computer Science
                     </h2>
-                    <h2 className="text-[16px]">
-                        GPA: 3.0
-                    </h2>
                     <h2 className="text-[14px]">
                         Relevant Coursework:
                         <div className="flex gap-6">
