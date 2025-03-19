@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Questrial } from 'next/font/google'
 import './globals.css'
 import NavBar from './components/NavBar'
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ['latin'] })
 const questrial = Questrial({ 
@@ -28,6 +29,7 @@ export default function RootLayout({
           className={questrial.className} >
             <NavBar/>
               {children}
+              <Analytics />
         </body>
 
     </html>
