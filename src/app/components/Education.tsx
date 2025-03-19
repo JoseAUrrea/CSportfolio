@@ -17,14 +17,14 @@ const Education = () => {
                     >
                     </Image>
                 </div>
-                <div className = " flex-1 max-w-[900px] rounded-t-xl p-4">
+                <div className = " flex-1 max-w-[1200px] rounded-t-xl p-4">
                     <h1 className = "text-[20px] font-bold">
                         University of Central Florida - Orlando, FL
                     </h1>
-                    <h2>
+                    <h2 className="mb-3 text-[20px]">
                         Bachelor of Science in Computer Science
                     </h2>
-                    <h2 className="text-[14px]">
+                    <h2 className="text-[20px]">
                         Relevant Coursework:
                         <div className="flex gap-6">
                             <ul className="list-disc list-inside">

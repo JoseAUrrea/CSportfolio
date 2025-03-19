@@ -38,6 +38,46 @@ body {
   background: rgb(var(--background-start-rgb));
 }
 
+p {
+  font-size: 20px;
+}
+
+/* Smaller screens (e.g., tablets and mobile) */
+@media (max-width: 768px) { 
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) { 
+  p {
+    font-size: 14px;
+  }
+}
+
+
+li {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) { 
+  li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) { 
+  li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+
 .animated-background {
   position: relative;
   min-height: 100vh;
@@ -127,3 +167,58 @@ body {
 .flipped .card-back {
   transform: rotateY(0); /* Rotate the back side when flipped */
 }
+
+.projectLayout {  
+  max-width: 90%;  
+  justify-content: center;  
+  align-items: center;  
+  -moz-column-count: 4;  
+  -webkit-column-gap: 1.5em;  
+  -moz-column-gap: 1.5em;  
+  column-gap: 1.5em;  
+  margin: 1em;  
+  padding: 1;  
+  -moz-column-gap: 1em;  
+  -webkit-column-gap: 1em;  
+  column-gap: 1em;  
+  font-size: 0.85em;  
+  transform: translate(40px, 50px);
+}
+.item {  
+  display: inline-block;  
+  background: #fff;  
+  padding: 0.5em;  
+  margin: 0 0 1.5em;  
+  max-width: 17rem;  
+  max-height: 50vh;  
+  -webkit-transition: 0.5s;  
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box;  
+  box-shadow: 2px 2px 10px rgb(140, 134, 134);  
+  border-radius: 2px 2px 2px 2px;  
+  flex-wrap: wrap;
+}
+.item img {  
+  max-width: 100%;  
+  max-height: 20vh;
+}
+
+.item:nth-of-type(4n + 1) {  
+  transform: rotate(5deg);  
+  transition: all 0.35s;}
+.item:nth-of-type(4n + 2) {  
+  transform: rotate(-5deg);  
+  transition: all 0.35s;} 
+.item:nth-of-type(4n + 3) {  
+  transform: rotate(3deg);  
+  transition: all 0.35s;}
+.item:nth-of-type(4n + 4) {  
+  transform: rotate(-3deg);  
+  transition: all 0.35s;} 
+.item:nth-of-type(4n + 5) {  
+  transform: rotate(3deg);  
+  transition: all 0.35s;
+}
+
+.item:hover {  transform: rotate(15deg);}
