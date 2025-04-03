@@ -69,8 +69,8 @@ export default function Home() {
           {photos.map((photo, index) => (
             <div key={index} className="item">
               <Image
-                src={photo.src} // ✅ Using the correct property
-                alt={photo.description} // ✅ Improved accessibility
+                src={photo.src}
+                alt={photo.description}
                 objectFit="cover"
                 layout="responsive"
                 className="rounded-xl"
@@ -78,7 +78,7 @@ export default function Home() {
                 height={300}
               />
               <div className="content">
-                <p>{photo.description}</p> {/* ✅ Dynamically passing description */}
+                <p>{photo.description}</p>
               </div>
             </div>
           ))}
