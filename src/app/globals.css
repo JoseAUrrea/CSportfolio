@@ -169,7 +169,7 @@ li {
 }
 
 .projectLayout {  
-  max-width: 90%;  
+  max-width: 100%;  
   justify-content: center;  
   align-items: center;  
   -moz-column-count: 4;  
@@ -182,7 +182,7 @@ li {
   -webkit-column-gap: 1em;  
   column-gap: 1em;  
   font-size: 0.85em;  
-  transform: translate(40px, 50px);
+  transform: translate(45px, 50px);
 }
 .item {  
   display: inline-block;  
