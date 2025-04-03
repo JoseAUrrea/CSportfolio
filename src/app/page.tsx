@@ -19,14 +19,14 @@ export default function Home() {
                 
               ];
   const photos = [
-    "/images/grad2.jpeg",
-    // "/images/zion.jpeg",
-    "/images/me_event.jpeg",
-    // "/images/big_sur.jpeg",
-    "/images/family.jpeg",
-    "/images/montereyBeach.jpeg",
+    { src: "/images/grad2.jpeg", description: "Graduation Day" },
+    // { src: "/images/zion.jpeg", description: "Zion National Park" },
+    { src: "/images/me_event.jpeg", description: "Product Launch" },
+    // { src: "/images/big_sur.jpeg", description: "Big Sur Viewpoint" },
+    { src: "/images/family.jpeg", description: "Family Visits" },
+    { src: "/images/montereyBeach.jpeg", description: "Monterey Beach" },
+  ];
 
-  ]
   return (
 
       <div className="animated-background flex flex-col items-center pt-[70px] z-20 pb-10">
@@ -68,16 +68,19 @@ export default function Home() {
 
         <div className="projectLayout">
           {photos.map((photo, index) => (
-            <div key={index} className="item" >
+            <div key={index} className="item">
               <Image
-                src={photo} // ✅ Pass the correct image path
-                alt="Gallery image"
+                src={photo.src} // ✅ Using the correct property
+                alt={photo.description} // ✅ Improved accessibility
                 objectFit="cover"
                 layout="responsive"
                 className="rounded-xl"
                 width={500}
                 height={300}
               />
+              <div className="content">
+                <p>{photo.description}</p> {/* ✅ Dynamically passing description */}
+              </div>
             </div>
           ))}
         </div>
