@@ -4,6 +4,7 @@ import { Questrial } from 'next/font/google'
 import './globals.css'
 import NavBar from './components/NavBar'
 import { Analytics } from "@vercel/analytics/react"
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 const questrial = Questrial({ 
@@ -24,7 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
         <body 
           className={questrial.className} >
             <NavBar/>

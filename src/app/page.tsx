@@ -33,15 +33,14 @@ export default function Home() {
           
           <div className='flex flex-col justify-center items-center pt-[20px]'>
             <div className='flex flex-col justify-center items-center '>
-            <h1 className="text-[40px] font-bold"> 
-              Hi, I'm 
+            <h1 className="text-[40px] font-bold">
             </h1>
-            <h1 className="text-cyan-500 text-[35px] animate-slideIn">
-              Jose Alejandro Urrea,
+            <h1 className="text-white text-[35px] font-bold animate-slideIn bg-gradient-to-l from-cyan-500 to-blue-500 bg-gray-200 px-6 py-1 rounded-full">
+              Jose Alejandro Urrea
             </h1>
             </div>
-            <p className="flex items-center text-[30px] mb-10">
-              <span>a Full Stack Engineer</span>
+            <p className="flex items-center text-[30px] mb-4">
+              <span>Full Stack Engineer</span>
               <AiTwotoneCode className="ml-2 inline-block" size={30} />
             </p>
           </div>
