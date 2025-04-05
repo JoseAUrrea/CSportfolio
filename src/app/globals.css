@@ -213,11 +213,11 @@ transform: translate(40px, 50px); */
 }
 
 .item {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.6); /* translucent white */
   padding: 0.5em;
   margin: 0;
   max-width: 17rem;
-  box-shadow: 2px 2px 10px rgb(140, 134, 134);
+  box-shadow: 2px 2px 10px rgba(140, 134, 134, 0.3); /* softer shadow */
   border-radius: 8px;
   transition: transform 0.35s ease;
   display: flex;
@@ -226,9 +226,10 @@ transform: translate(40px, 50px); */
   height: 400px; /* Fixed height */
 }
 
+
 @media (max-width: 768px) {
   .item {
-    height: 280px; /* Adjusted height for smaller screens */
+    height: 260px; /* Adjusted height for smaller screens */
   }
 }
 

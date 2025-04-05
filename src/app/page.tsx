@@ -35,13 +35,14 @@ export default function Home() {
             <div className='flex flex-col justify-center items-center '>
             <h1 className="text-[40px] font-bold">
             </h1>
-            <h1 className="text-white text-[30px] md:text-[35px] font-bold animate-slideIn bg-gradient-to-l from-cyan-500 to-blue-500 bg-gray-200 px-6 py-1 rounded-full">
+            </div>
+            <h1 className="text-[32px] md:text-[50px] font-bold animate-slideIn px-6 py-1 rounded-full 
+               bg-clip-padding backdrop-filter backdrop-blur-md 
+               bg-gradient-to-l from-[rgba(6,182,212,0.4)] to-[rgba(59,130,246,0.4)]">
               Jose Alejandro Urrea
             </h1>
-            </div>
-            <p className="flex items-center text-[26px] md:text-[30px] mb-4">
-              <span>Full Stack Engineer</span>
-              <AiTwotoneCode className="ml-2 inline-block" size={30} />
+            <p className="flex items-center text-[36px] md:text-[60px] font-bold mb-4">
+              <span> Software Engineer</span>
             </p>
           </div>
 
@@ -88,53 +89,77 @@ export default function Home() {
 
 
 
-        <p className='flex items-center pb-6 mt-10 text-[25px]'>
-          <CiLocationOn className="inline-block" size={25} />
-          <span className='ml-2 text-[25px]'>Los Angeles, CA</span>
+        <p className='flex items-center pb-6 mt-6 text-[30px]'>
+          <CiLocationOn className="inline-block" size={30} />
+          <span className='ml-2 font-bold'>Los Angeles, CA</span>
         </p>
 
         <nav className="flex justify-center mt-10 pb-20 z-20 border-b border-gray-300 mb-20 overflow-auto">
           <div className="flex space-x-4 sm:space-x-6">
-            <a
-              href="#about"
-              className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black flex items-center justify-center md:text-xl"
-            >
-              <span className="hidden sm:inline">About</span>
-              <FaInfoCircle className="sm:hidden text-2xl" />
-            </a>
+          <a
+            href="#about"
+            className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
+                      hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
+                      hover:bg-gradient-to-l 
+                      hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
+                      hover:text-black transition-all duration-300 ease-in-out"
+          >
+            <span className="hidden sm:inline text-[20px] font-bold">About</span>
+            <FaInfoCircle className="sm:hidden text-2xl" />
+          </a>
             <a
               href="#experience"
-              className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black flex items-center justify-center md:text-xl"
+              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
+                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
+                        hover:bg-gradient-to-l 
+                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
+                        hover:text-black transition-all duration-300 ease-in-out"
             >
-              <span className="hidden sm:inline">Experience</span>
+              <span className="hidden sm:inline text-[20px] font-bold">Experience</span>
               <FaSuitcase className="sm:hidden text-2xl" />
             </a>
             <a
               href="#technologies"
-              className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black flex items-center justify-center md:text-xl"
+              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
+                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
+                        hover:bg-gradient-to-l 
+                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
+                        hover:text-black transition-all duration-300 ease-in-out"
             >
-              <span className="hidden sm:inline">Technologies</span>
+              <span className="hidden sm:inline text-[20px] font-bold">Technologies</span>
               <FaTools className="sm:hidden text-2xl" />
             </a>
             <a
               href="#projects"
-              className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black flex items-center justify-center md:text-xl"
+              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
+                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
+                        hover:bg-gradient-to-l 
+                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
+                        hover:text-black transition-all duration-300 ease-in-out"
             >
-              <span className="hidden sm:inline">Projects</span>
+              <span className="hidden sm:inline text-[20px] font-bold">Projects</span>
               <FaCode className="sm:hidden text-2xl" />
             </a>
             <a
               href="#education"
-              className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black flex items-center justify-center md:text-xl"
+              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
+                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
+                        hover:bg-gradient-to-l 
+                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
+                        hover:text-black transition-all duration-300 ease-in-out"
             >
-              <span className="hidden sm:inline">Education</span>
+              <span className="hidden sm:inline text-[20px] font-bold">Education</span>
               <FaGraduationCap className="sm:hidden text-2xl" />
             </a>
             <a
               href="#contact"
-              className="tab rounded py-2 md:px-6 px-1 hover:bg-opacity-60 hover:bg-cyan-200 hover:text-black flex items-center justify-center md:text-xl"
+              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
+                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
+                        hover:bg-gradient-to-l 
+                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
+                        hover:text-black transition-all duration-300 ease-in-out"
             >
-              <span className="hidden sm:inline">Contact</span>
+              <span className="hidden sm:inline text-[20px] font-bold">Contact</span>
               <FaEnvelope className="sm:hidden text-2xl" />
             </a>
           </div>

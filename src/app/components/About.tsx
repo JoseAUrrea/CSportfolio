@@ -12,38 +12,39 @@ const About = () => {
                 <div>
                     <p className="indent-5">
                         I am a Computer Science graduate from the University of Central Florida with a strong foundation in full-stack development and cloud engineering. 
-                        My experience spans across designing scalable systems, crafting user-friendly applications, and leveraging cutting-edge technologies to deliver impactful solutions.
+                        My experience spans designing scalable systems, crafting user-friendly applications, and leveraging cutting-edge technologies to deliver impactful solutions.
                     </p>
 
-                    <br></br>
+                    <br />
 
                     <p className="indent-5">
-                        Currently, as a Mid-Level Full Stack Engineer at AlterCall, I work with technologies like JavaScript, TypeScript, React, Node.js, PostgreSQL, and AWS to design scalable architectures, develop robust APIs, and optimize workflows. 
-                        I focus on creating intuitive interfaces by integrating designs from Figma to React and foster collaboration by mentoring peers and conducting code reviews.
+                        Currently, as a Mid-Level Full Stack Engineer at AlterCall, I work with technologies like JavaScript, TypeScript, React, Node.js, PostgreSQL, and AWS to design scalable architectures, build robust APIs, and develop end-to-end features across the stack. 
+                        I contribute to both front-end and back-end development — from integrating Figma designs into React components to implementing efficient server-side logic and database structures. 
+                        I thrive in fast-paced environments and consistently deliver high-performance, well-architected solutions under tight deadlines.
                     </p>
 
-                    <br></br>
+                    <br />
 
                     <p className="indent-5">
-                        In a previous project, I led the back-end development for a fully responsive web application, enhancing social networking features through algorithm design and ensuring scalability using AWS S3, API Gateway, MySQL RDS, Prisma ORM, and Lambda functions.
+                        In a previous role, I led back-end development for a fully responsive web application, enhancing social networking features through custom algorithms and ensuring scalability using AWS S3, API Gateway, MySQL RDS, Prisma ORM, and Lambda functions.
                     </p>
 
-                    <br></br>
+                    <br />
 
                     <p className="indent-5">
-                        My development approach emphasizes thorough documentation, Agile methodologies, and consistent progress tracking using tools like Jira. This ensures seamless communication and efficiency throughout the development lifecycle.
+                        My workflow emphasizes thorough documentation, Agile methodologies, and consistent progress tracking with tools like Jira — enabling seamless collaboration and efficient delivery throughout the development lifecycle.
                     </p>
 
-                    <br></br>
+                    <br />
 
                     <p className="indent-5">
-                        Beyond my professional roles, I have gained experience in diverse projects, including machine learning, robot vision, and artificial intelligence. These endeavors have sharpened my skills in backend development, database management, data analysis, and neural network design.
+                        Outside of work, I’ve explored projects in machine learning, robot vision, and artificial intelligence, which have deepened my skills in backend systems, database management, data analysis, and neural network design.
                     </p>
 
-                    <br></br>
+                    <br />
 
                     <p className="indent-5">
-                        My goal is to contribute my expertise to a dynamic workplace, continuously grow as a developer, and drive innovation to help achieve company goals.
+                        My goal is to contribute my expertise to a dynamic team, continuously grow as a developer, and help drive innovative solutions that align with company objectives.
                     </p>
                 </div>
                 </div>
