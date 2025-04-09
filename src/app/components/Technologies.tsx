@@ -11,7 +11,7 @@ const Technologies = ({ techList }: TechListTypes) => {
     return (
         <div className="flex flex-col items-center px-4 pt-16 max-w-[1200px]">
             
-            <h1 className="text-[27px] font-bold pb-2 mb-6">
+            <h1 className="text-[36px] font-bold pb-2 mb-6">
                 Technologies
             </h1>
             

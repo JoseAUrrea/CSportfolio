@@ -61,7 +61,7 @@ const ListItem = ({ title, details }: { title: string; details: string[] }) => {
 const Experience = () => {
     return (
         <div className="flex flex-col items-center justify-center px-4 pt-12">
-            <h1 className="text-[27px] font-bold pb-2">Experience</h1>
+            <h1 className="text-[36px] font-bold pb-2">Experience</h1>
 
             <div className="flex flex-col md:flex-row gap-6 items-center md:items-start pb-16 border-b border-gray-300">
                 <div className="flex-1 max-w-[1200px] rounded-t-xl">

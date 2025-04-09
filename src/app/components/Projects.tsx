@@ -5,7 +5,7 @@ import Link from "next/link";
 const Projects = () => {
     return (
         <div className=" rounded flex flex-col items-center justify-center pt-16 ">
-            <h1 className = "text-[27px] font-bold pb-2">
+            <h1 className = "text-[36px] font-bold pb-2">
                 Projects
             </h1>
             <p className="pb-4">Click on the titles to reach the repository</p>
