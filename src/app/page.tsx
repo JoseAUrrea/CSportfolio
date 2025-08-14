@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
+import Reviews from './components/Reviews';
 import { CiLocationOn } from "react-icons/ci";
 import { AiTwotoneCode } from "react-icons/ai";
 import { FaInfoCircle, FaSuitcase, FaTools, FaCode, FaGraduationCap, FaEnvelope } from 'react-icons/fa';
@@ -89,12 +90,12 @@ export default function Home() {
 
 
 
-        <p className='flex items-center pb-6 mt-6 text-[30px]'>
+        <p className='flex items-center pb-6 mt-2 text-[30px]'>
           <CiLocationOn className="inline-block" size={30} />
           <span className='ml-2 font-bold'>Los Angeles, CA</span>
         </p>
 
-        <nav className="flex justify-center mt-10 pb-20 z-20 border-b border-gray-300 mb-20 overflow-auto">
+        <nav className="flex justify-center mt-10 mb-16 pb-2 z-20 overflow-auto border-b-2">
           <div className="flex space-x-4 sm:space-x-6">
           <a
             href="#about"
@@ -167,6 +168,7 @@ export default function Home() {
         
 
         <div id="about" className="-mt-[100px] pt-[100px]"><About /></div>
+        <div id="reviews" className="-mt-[100px] pt-[100px]"><Reviews /></div>
         <div id="experience" className="-mt-[100px] pt-[100px]"><Experience /></div>
         <div id="technologies" className="-mt-[100px] pt-[100px]"><Technologies techList={techs} /></div>
         <div id="projects" className="-mt-[100px] pt-[100px]"><Projects /></div>

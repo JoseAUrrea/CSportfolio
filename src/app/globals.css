@@ -186,8 +186,8 @@ transform: translate(40px, 50px); */
 .projectLayout {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Default: 4 columns per row */
-  gap: 1em;
-  max-width: 90%;
+  gap: 3em;
+  max-width: 100%;
   justify-content: center;
   margin: 1em auto;
   padding: 1em;
@@ -196,19 +196,45 @@ transform: translate(40px, 50px); */
 /* Responsive Design */
 @media (max-width: 1024px) {
   .projectLayout {
-    grid-template-columns: repeat(3, 1fr); /* 3 per row for tablets */
+    display: flex;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 3em;
+    padding-left: 5em;
+    max-width: 100%;
+    scroll-snap-type: x mandatory;
+  }
+
+  .item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    height: 260px;
+  }
+
+  .item img {
+    max-height: 80%;
   }
 }
 
 @media (max-width: 768px) {
   .projectLayout {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row for mobile */
+    display: flex;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 2em;
+    padding-left: 1em;
+    max-width: 100%;
+    scroll-snap-type: x mandatory;
   }
-}
 
-@media (max-width: 480px) {
-  .projectLayout {
-    grid-template-columns: repeat(2, 1fr); /* Ensuring 2 per row on smaller screens */
+  .item {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    height: 260px;
+  }
+
+  .item img {
+    max-height: 80%;
   }
 }
 
@@ -225,41 +251,6 @@ transform: translate(40px, 50px); */
   align-items: stretch; /* Ensures children stretch full width */
   height: 400px; /* Fixed height */
 }
-
-.projectCard {
-  padding: 0.5rem 0.25rem;
-  width: 350px;
-  background: rgba(161, 159, 159, 0.095); /* Light mode base: semi-transparent black */
-  border-radius: 0.5rem;
-  border: 1px solid rgba(53, 52, 52, 0.67); /* subtle white border */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: background 0.3s ease, border 0.3s ease;
-}
-
-.projectCard:hover {
-  background: rgba(182, 180, 180, 0.323); /* slightly more visible on hover */
-}
-
-/* Dark mode override */
-@media (prefers-color-scheme: dark) {
-  .projectCard {
-    background: rgba(255, 255, 255, 0.1); /* semi-transparent white in dark mode */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .projectCard:hover {
-    background: rgba(255, 255, 255, 0.15);
-  }
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-  .projectCard {
-    width: 400px;
-  }
-}
-
 
 @media (max-width: 768px) {
   .item {
@@ -312,3 +303,61 @@ transform: translate(40px, 50px); */
 }
 
 .item:hover {  transform: rotate(15deg);}
+
+.projectCard {
+  padding: 0.5rem 0.25rem;
+  width: 350px;
+  background: rgba(161, 159, 159, 0.095); /* Light mode base: semi-transparent black */
+  border-radius: 0.5rem;
+  border: 1px solid rgba(53, 52, 52, 0.67); /* subtle white border */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.projectCard:hover {
+  background: rgba(182, 180, 180, 0.323); /* slightly more visible on hover */
+}
+
+/* Dark mode override */
+@media (prefers-color-scheme: dark) {
+  .projectCard {
+    background: rgba(255, 255, 255, 0.1); /* semi-transparent white in dark mode */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .projectCard:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .projectCard {
+    width: 400px;
+  }
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Firefox Scrollbar Styles */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+}

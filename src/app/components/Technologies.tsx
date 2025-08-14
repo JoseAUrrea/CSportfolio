@@ -9,7 +9,7 @@ const Technologies = ({ techList }: TechListTypes) => {
     const projectDesignAndMethodologies = ["Agile", "Scrum", "Jira", "Trello", "Figma", "Discord", "Slack"];
     const designAndMultimedia = ["Adobe", "Premiere Pro", "Creative Cloud"];
     return (
-        <div className="flex flex-col items-center px-4 pt-16 max-w-[1200px]">
+        <div className="flex flex-col items-center px-4 py-16 max-w-[1200px] border-b border-gray-300">
             
             <h1 className="text-[36px] font-bold pb-2 mb-6">
                 Technologies

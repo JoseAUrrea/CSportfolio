@@ -7,7 +7,7 @@ const ExperienceTitle = ({level, position, company, dates, technologies, summary
     return(
         <>
         <div className="flex flex-col md:flex-row gap-2 items-center w-full">
-            <h1 className="text-[22px] font-extrabold text-left">
+            <h1 className="text-[26px] font-extrabold text-left">
                 {`${level} ${position} - ${company}`}
             </h1>
             {/* border-2 rounded-3xl border-blue-400 px-6 py-2 bg-inherit */}
@@ -16,9 +16,9 @@ const ExperienceTitle = ({level, position, company, dates, technologies, summary
         <p className="my-4 indent-5">
             {summary}
         </p>
-        <div className="flex flex-row gap-4 my-4">
+        <div className="flex flex-row gap-4 my-4 md:ml-10">
             <FaTools className="text-2xl md:mt-2" />
-            <p>
+            <p className="text-lg">
                 {technologies}
             </p>
         </div>
@@ -27,7 +27,7 @@ const ExperienceTitle = ({level, position, company, dates, technologies, summary
 }
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-    <div className="mb-6 md:ml-10">
+    <div className="flex flex-col gap-1 mb-6 md:ml-10">
         <h2 className="font-extrabold text-[20px]">{title}</h2>
         {children}
     </div>
@@ -39,7 +39,7 @@ const ListItem = ({ title, details }: { title: string; details: string[] }) => {
     return (
         <div className="pl-5 mt-2">
             <button
-                className="flex gap-2 items-center text-sm hover:text-blue-500"
+                className="flex gap-2 items-center text-sm"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <p className="font-semibold">{title}</p>
@@ -67,22 +67,41 @@ const Experience = () => {
                 <div className="flex-1 max-w-[1200px] rounded-t-xl">
 
                     <ExperienceTitle 
-                        level="Mid-Level"
+                        level="Senior"
                         position="Full Stack Engineer"
                         company="AlterCall"
                         dates={["April 2024", "Present"]}
-                        technologies="JavaScript, TypeScript, React, Node.js, PostgreSQL, AWS (Cognito, RDS, GraphQL, API Gateway, Lambda, SNS, SQS, RDS, S3 & more)"
-                        summary="As a Mid-Level Full Stack Engineer, I design and develop scalable architectures, optimize backend workflows, and build intuitive user experiences. I specialize in building robust APIs, enhancing performance with caching, and integrating third-party services like Stripe and AWS. I also collaborate with designers to convert Figma mockups into production-ready React applications. At work, I actively contribute to Agile methodologies, including Scrum and sprints, to plan and execute projects efficiently. I leverage Jira for ticket management, ensuring streamlined communication, progress tracking, and timely delivery of features."
+                        technologies="Python, LangGraph, OpenAI, JavaScript, TypeScript, React, Node.js, PostgreSQL, AWS (Cognito, RDS, GraphQL, API Gateway, Lambda, SNS, SQS, RDS, S3 & more)"
+                        summary="As a Senior Full Stack Engineer, I design and develop scalable, hierarchical multi-agent AI systems using LangGraph, build robust backend infrastructure to support customer workflows, and create intuitive, production-ready React applications from Figma designs. I collaborate across teams to deliver product-based software that improves user experience and business efficiency. Within Agile Scrum environments, I lead sprints, manage tickets in Jira, and ensure on-time, high-quality feature delivery through clear communication and progress tracking. My work enables scalable AI-driven solutions and seamless end-to-end product experiences."
                     />
 
                     {/* Backend Section */}
                     <Section title="Backend Engineering ">
                         <ListItem
+                            title="Multi-Agent AI Systems"
+                            details={[
+                                "Developed and maintained a multi-agent AI system using LangGraph and OpenAI/Groq, enabling the platform to handle complex tasks and workflows.",
+                            ]}
+                        />
+                        <ListItem
+                            title="Infrastructure as Code (CDK)"
+                            details={[
+                                "Deployed cloud infrastructure using AWS CDK, provisioning resources such as Lambda functions, API Gateway, S3, and DynamoDB.",
+                                "Automated deployments to ensure consistency and scalability across environments.",
+                            ]}
+                        />
+                        <ListItem
+                            title="Product-based Software Development"
+                            details={[
+                                "Developed a product-based system where users could purchase various products and gain access to exclusive features based on their purchases.",
+                                "Integrated role-based access control (RBAC) to ensure users received appropriate access according to their product purchases.",
+                                "Ensured a seamless user experience in managing purchased products and corresponding access.",
+                            ]}
+                        />
+                        <ListItem
                             title="User Authentication (AWS Cognito)"
                             details={[
-                                "Developed and maintained a secure authentication system using AWS Cognito, implementing user pools, API-based sign-up/sign-in, email verification, and password reset workflows.",
-                                "Integrated Cognito groups for role-based access control, ensuring restricted access to sensitive features.",
-                                "Google SSO integration for easy sign-in and sign-up"
+                                "Developed and maintained a secure authentication system using AWS Cognito, third party authentication, implementing user pools, API-based sign-up/sign-in, email verification, and password reset workflows.",
                             ]}
                         />
                         <ListItem
@@ -119,25 +138,10 @@ const Experience = () => {
                             ]}
                         />
                         <ListItem
-                            title="Product-based Software Development"
-                            details={[
-                                "Developed a product-based system where users could purchase various products and gain access to exclusive features based on their purchases.",
-                                "Integrated role-based access control (RBAC) to ensure users received appropriate access according to their product purchases.",
-                                "Ensured a seamless user experience in managing purchased products and corresponding access.",
-                            ]}
-                        />
-                        <ListItem
                             title="Caching (Redis)"
                             details={[
                                 "Implemented Redis for caching frequently accessed API responses, reducing database load and improving application performance.",
                                 "Designed and managed cache invalidation strategies to ensure real-time data consistency.",
-                            ]}
-                        />
-                        <ListItem
-                            title="Infrastructure as Code (AWS CDK)"
-                            details={[
-                                "Deployed cloud infrastructure using AWS CDK, provisioning resources such as Lambda functions, API Gateway, S3, and DynamoDB.",
-                                "Automated deployments to ensure consistency and scalability across environments.",
                             ]}
                         />
                     </Section>
