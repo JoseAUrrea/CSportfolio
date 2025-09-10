@@ -6,19 +6,20 @@ import { FaTools, FaChevronDown} from "react-icons/fa"
 const ExperienceTitle = ({level, position, company, dates, technologies, summary}: { level: string; position: string; company: string, dates: string[], technologies: string; summary: string;}) => {
     return(
         <>
-        <div className="flex flex-col md:flex-row gap-2 items-center w-full">
-            <h1 className="text-[26px] font-extrabold text-left">
-                {`${level} ${position} - ${company}`}
+        <div className="flex flex-col gap-1 w-full ">
+            <h1 className="text-lg md:text-lg font-extrabold text-left">
+                {`${level} ${position}`}
             </h1>
-            {/* border-2 rounded-3xl border-blue-400 px-6 py-2 bg-inherit */}
-            <p className="text-sm no-underline text-left">{`${dates[0]} - ${dates[1]}`}</p> {/* Add the dates here */}
+            <h1 className="text-md md:text-md font-extrabold text-left">
+            {`${company}`} {`(${dates[0]} - ${dates[1]})`}
+            </h1>
         </div>
-        <p className="my-4 indent-5">
+        <p className="my-4">
             {summary}
         </p>
-        <div className="flex flex-row gap-4 my-4 md:ml-10">
+        <div className="flex flex-row gap-4 my-4">
             <FaTools className="text-2xl md:mt-2" />
-            <p className="text-lg">
+            <p className="text-sm md:text-md">
                 {technologies}
             </p>
         </div>
@@ -28,7 +29,7 @@ const ExperienceTitle = ({level, position, company, dates, technologies, summary
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
     <div className="flex flex-col gap-1 mb-6 md:ml-10">
-        <h2 className="font-extrabold text-[20px]">{title}</h2>
+        <h2 className="font-extrabold text-md">{title}</h2>
         {children}
     </div>
 );
