@@ -69,7 +69,7 @@ const Reviews = () => {
         {
             name: "AlterCall",
             review: "Alejandro Urrea is a Full Stack Engineer at AlterCall, specializing in front-end development, user interface architecture, and optimizing user experiences. With a Bachelor's in Computer Science from the University of Central Florida, Alejandro leverages his expertise in JavaScript frameworks and modern front-end technologies to engineer high-performance web applications and scalable platforms that support large-scale social networks. His work focuses on creating responsive, intuitive interfaces that drive user engagement while ensuring technical robustness. Alejandro's technical acumen extends across the full stack, allowing him to design and implement end-to-end solutions that integrate seamlessly with backend infrastructures. His experience includes optimizing application performance, architecting scalable systems, and aligning software functionality with business requirements. Passionate about building business software that balances advanced functionality with user-friendly design, Alejandro consistently delivers solutions that enhance system accessibility and operational efficiency.",
-            link: "https://altercall.com/team",
+            link: "https://altercall.com/team?tab=default-3&q=alejandro",
         },
         {
             name: "Deepesh H.",
