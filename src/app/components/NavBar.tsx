@@ -58,29 +58,29 @@ const NavBar = () => {
                 </div>
                 {isDropdownOpen && (
                         <div ref={dropdownRef} className="absolute right-5 w-40 y-5 bg-gray-500 bg-opacity-100 shadow-md rounded top-[60px]">
-                            <a href="#about" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
+                            <a href="#about" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white items-center gap-2">
                                 <FaInfoCircle className="text-xl sm:text-base" />
-                                <span className="ml-2">About</span>
+                                <span>About</span>
                             </a>
-                            <a href="#experience" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
+                            <a href="#experience" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white items-center gap-2">
                                 <FaSuitcase className="text-xl sm:text-base" />
-                                <span className="ml-2">Experience</span>
+                                <span>Experience</span>
                             </a>
-                            <a href="#technologies" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
+                            <a href="#technologies" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white items-center gap-2">
                                 <FaTools className="text-xl sm:text-base" />
-                                <span className="ml-2">Technologies</span>
+                                <span>Technologies</span>
                             </a>
-                            <a href="#projects" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
+                            <a href="#projects" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white items-center gap-2">
                                 <FaCode className="text-xl sm:text-base" />
-                                <span className="ml-2">Projects</span>
+                                <span>Projects</span>
                             </a>
-                            <a href="#education" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
+                            <a href="#education" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white items-center gap-2">
                                 <FaGraduationCap className="text-xl sm:text-base" />
-                                <span className="ml-2">Education</span>
+                                <span>Education</span>
                             </a>
-                            <a href="#contact" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
+                            <a href="#contact" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white items-center gap-2">
                                 <FaEnvelope className="text-xl sm:text-base" />
-                                <span className="ml-2">Contact</span>
+                                <span>Contact</span>
                             </a>
                         </div>
                     )}
