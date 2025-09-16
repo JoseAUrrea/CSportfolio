@@ -37,13 +37,13 @@ export default function Home() {
             <h1 className="text-[40px] font-bold">
             </h1>
             </div>
-            <h1 className="text-[32px] md:text-[50px] font-bold animate-slideIn px-6 py-1 rounded-full 
+            {/* <h1 className="text-[32px] md:text-[50px] font-bold animate-slideIn px-6 py-1 rounded-full 
                bg-clip-padding backdrop-filter backdrop-blur-md 
                bg-gradient-to-l from-[rgba(6,182,212,0.4)] to-[rgba(59,130,246,0.4)]">
               Jose Alejandro Urrea
-            </h1>
+            </h1> */}
             <p className="flex items-center text-[36px] md:text-[60px] font-bold mb-4">
-              <span> Software Engineer</span>
+              <span> Full Stack & AI Engineer</span>
             </p>
           </div>
 
@@ -67,7 +67,7 @@ export default function Home() {
           />
         </div> */}
 
-        <div className="projectLayout">
+        {/* <div className="projectLayout">
           {photos.map((photo, index) => (
             <div key={index} className="item">
               <Image
@@ -84,15 +84,15 @@ export default function Home() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* <FlipCard /> */}
 
 
 
         <p className='flex items-center pb-6 mt-2 text-[30px]'>
-          <CiLocationOn className="inline-block" size={30} />
-          <span className='ml-2 font-bold'>Los Angeles, CA</span>
+          <CiLocationOn className="inline-block text-2xl md:text-3xl" />
+          <span className='text-xl md:text-2xl ml-2 font-bold'>Los Angeles, CA</span>
         </p>
 
         <nav className="flex justify-center mt-10 mb-16 pb-2 z-20 overflow-auto border-b-2">
@@ -102,8 +102,8 @@ export default function Home() {
             className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
                       hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
                       hover:bg-gradient-to-l 
-                      hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
-                      hover:text-black transition-all duration-300 ease-in-out"
+                      hover:bg-blue-500
+                      transition-all duration-300 ease-in-out"
           >
             <span className="hidden sm:inline text-[20px] font-bold">About</span>
             <FaInfoCircle className="sm:hidden text-2xl" />
@@ -113,8 +113,8 @@ export default function Home() {
               className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
                         hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
                         hover:bg-gradient-to-l 
-                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
-                        hover:text-black transition-all duration-300 ease-in-out"
+                        hover:bg-blue-500
+                        transition-all duration-300 ease-in-out"
             >
               <span className="hidden sm:inline text-[20px] font-bold">Experience</span>
               <FaSuitcase className="sm:hidden text-2xl" />
@@ -124,8 +124,8 @@ export default function Home() {
               className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
                         hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
                         hover:bg-gradient-to-l 
-                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
-                        hover:text-black transition-all duration-300 ease-in-out"
+                        hover:bg-blue-500
+                        transition-all duration-300 ease-in-out"
             >
               <span className="hidden sm:inline text-[20px] font-bold">Technologies</span>
               <FaTools className="sm:hidden text-2xl" />
@@ -135,8 +135,8 @@ export default function Home() {
               className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
                         hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
                         hover:bg-gradient-to-l 
-                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
-                        hover:text-black transition-all duration-300 ease-in-out"
+                        hover:bg-blue-500
+                        transition-all duration-300 ease-in-out"
             >
               <span className="hidden sm:inline text-[20px] font-bold">Projects</span>
               <FaCode className="sm:hidden text-2xl" />
@@ -146,8 +146,8 @@ export default function Home() {
               className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
                         hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
                         hover:bg-gradient-to-l 
-                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
-                        hover:text-black transition-all duration-300 ease-in-out"
+                        hover:bg-blue-500
+                        transition-all duration-300 ease-in-out"
             >
               <span className="hidden sm:inline text-[20px] font-bold">Education</span>
               <FaGraduationCap className="sm:hidden text-2xl" />
@@ -157,8 +157,8 @@ export default function Home() {
               className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
                         hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
                         hover:bg-gradient-to-l 
-                        hover:from-[rgba(6,182,212,0.6)] hover:to-[rgba(59,130,246,0.6)] 
-                        hover:text-black transition-all duration-300 ease-in-out"
+                        hover:bg-blue-500
+                        transition-all duration-300 ease-in-out"
             >
               <span className="hidden sm:inline text-[20px] font-bold">Contact</span>
               <FaEnvelope className="sm:hidden text-2xl" />
@@ -167,13 +167,40 @@ export default function Home() {
         </nav>
         
 
-        <div id="about" className="-mt-[100px] pt-[100px]"><About /></div>
-        <div id="reviews" className="-mt-[100px] pt-[100px]"><Reviews /></div>
-        <div id="experience" className="-mt-[100px] pt-[100px]"><Experience /></div>
-        <div id="technologies" className="-mt-[100px] pt-[100px]"><Technologies techList={techs} /></div>
-        <div id="projects" className="-mt-[100px] pt-[100px]"><Projects /></div>
-        <div id="education" className="-mt-[100px] pt-[100px]"><Education /></div>
-        <div id="contact" className="-mt-[100px] pt-[100px]"><Contact /></div>
+        {/* About Section */}
+        <div id="about" className="section-spacing-tight">
+            <About />
+        </div>
+
+        {/* Reviews Section - Closely tied to About */}
+        <div id="reviews" className="section-spacing-tight">
+            <Reviews />
+        </div>
+
+        {/* Experience Section */}
+        <div id="experience" className="section-spacing">
+            <Experience />
+        </div>
+
+        {/* Technologies Section */}
+        <div id="technologies" className="section-spacing">
+            <Technologies techList={techs} />
+        </div>
+
+        {/* Projects Section */}
+        <div id="projects" className="section-spacing">
+            <Projects />
+        </div>
+
+        {/* Education Section */}
+        <div id="education" className="section-spacing">
+            <Education />
+        </div>
+
+        {/* Contact Section */}
+        <div id="contact" className="section-spacing">
+            <Contact />
+        </div>
         <div className='h-[200px]'></div>
       </div>
 

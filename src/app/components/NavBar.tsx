@@ -59,27 +59,27 @@ const NavBar = () => {
                 {isDropdownOpen && (
                         <div ref={dropdownRef} className="absolute right-5 w-40 y-5 bg-gray-500 bg-opacity-100 shadow-md rounded top-[60px]">
                             <a href="#about" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
-                                <FaInfoCircle className="text-xl sm:text-md" />
+                                <FaInfoCircle className="text-xl sm:text-base" />
                                 <span className="ml-2">About</span>
                             </a>
                             <a href="#experience" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
-                                <FaSuitcase className="text-xl sm:text-md" />
+                                <FaSuitcase className="text-xl sm:text-base" />
                                 <span className="ml-2">Experience</span>
                             </a>
                             <a href="#technologies" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
-                                <FaTools className="text-xl sm:text-md" />
+                                <FaTools className="text-xl sm:text-base" />
                                 <span className="ml-2">Technologies</span>
                             </a>
                             <a href="#projects" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
-                                <FaCode className="text-xl sm:text-md" />
+                                <FaCode className="text-xl sm:text-base" />
                                 <span className="ml-2">Projects</span>
                             </a>
                             <a href="#education" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
-                                <FaGraduationCap className="text-xl sm:text-md" />
+                                <FaGraduationCap className="text-xl sm:text-base" />
                                 <span className="ml-2">Education</span>
                             </a>
                             <a href="#contact" onClick={closeDropdown} className="flex px-4 py-2 hover:bg-gray-700 text-white">
-                                <FaEnvelope className="text-xl sm:text-md" />
+                                <FaEnvelope className="text-xl sm:text-base" />
                                 <span className="ml-2">Contact</span>
                             </a>
                         </div>

@@ -1,16 +1,37 @@
 "use client"
 
 import { useRef, useState, useEffect } from 'react';
+import { FaQuoteLeft, FaExternalLinkAlt, FaStar } from 'react-icons/fa';
 
 const ReviewCard = ({ name, review, link }: { name: string; review: string; link: string }) => {
     return (
         <div 
-            className="flex flex-col items-center border border-gray-300 rounded-lg p-4 h-[300px] hover:bg-gray-100 cursor-pointer overflow-x-hidden overflow-y-auto w-[280px] sm:w-[320px] md:w-[600px] lg:w-[900px] xl:w-[1000px] flex-shrink-0 snap-center transition-all duration-300 hover:shadow-lg hover:scale-[1.02]" 
+            className="flex flex-col bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-6 h-[350px] hover:shadow-2xl cursor-pointer overflow-hidden w-[320px] sm:w-[360px] md:w-[500px] lg:w-[600px] xl:w-[700px] flex-shrink-0 snap-center transition-all duration-300 hover:scale-[1.02] group" 
             onClick={() => window.open(link, "_blank")}
-            style={{ minWidth: '280px' }}
+            style={{ minWidth: '320px' }}
         >
-            <p className="text-lg sm:text-xl font-bold mb-2 text-center">{name}</p>
-            <p className="text-md sm:text-md leading-relaxed">{review}</p>
+            {/* Header with quote icon and company name */}
+            <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center space-x-2">
+                    <FaQuoteLeft className="text-blue-500 dark:text-blue-400 text-lg" />
+                    <p className="text-lg font-bold text-gray-900 dark:text-white">{name}</p>
+                </div>
+                <FaExternalLinkAlt className="text-gray-400 dark:text-gray-500 text-sm group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-200" />
+            </div>
+
+            {/* Review text */}
+            <div className="flex-1 overflow-y-auto">
+                <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300 pr-2">
+                    {review}
+                </p>
+            </div>
+
+            {/* Footer with gradient */}
+            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+                    Click to view full profile
+                </p>
+            </div>
         </div>
     );
 };
@@ -21,15 +42,15 @@ const ScrollIndicator = ({ currentIndex, totalItems, onScrollTo }: {
     onScrollTo: (index: number) => void;
 }) => {
     return (
-        <div className="flex gap-2 justify-center mt-4">
+        <div className="flex gap-3 justify-center mt-6">
             {Array.from({ length: totalItems }).map((_, index) => (
                 <button
                     key={index}
                     onClick={() => onScrollTo(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    className={`h-2 rounded-full transition-all duration-300 ${
                         index === currentIndex 
-                            ? 'bg-blue-500 w-6' 
-                            : 'bg-gray-300 hover:bg-gray-400'
+                            ? 'bg-gradient-to-r from-blue-500 to-purple-500 w-8 shadow-lg' 
+                            : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 w-2'
                     }`}
                     aria-label={`Go to review ${index + 1}`}
                 />
@@ -144,41 +165,51 @@ const Reviews = () => {
     }, [reviews.length]);
 
     return (
-        <div className="w-screen md:w-[1200px] -mx-4 pt-12 pb-16 border-b border-gray-300 overflow-hidden">
-            <h1 className="text-lg sm:text-xl md:text-2xl pb-2 px-4 text-center">
-                Reviews from companies and colleagues
-            </h1>
-            
-            {/* Unified horizontal scroll for all screen sizes */}
-            <div className="w-full px-4 items-center justify-center">
-                <div className="relative w-full max-w-[1000px] lg:max-w-[1200px] xl:max-w-[1400px] mx-auto p-2">
-                    <div 
-                        ref={scrollContainerRef}
-                        className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth p-4"
-                        style={{ 
-                            scrollbarWidth: 'none', 
-                            msOverflowStyle: 'none',
-                            WebkitOverflowScrolling: 'touch',
-                            width: '100%'
-                        }}
-                    >
-                        {reviews.map((review) => (
-                            <ReviewCard key={review.name} {...review} />
-                        ))}
-                    </div>
+        <div className="flex flex-col w-full items-center justify-center px-4">
+            <div className="w-full max-w-6xl">
+                {/* Header */}
+                <div className="text-center md:text-left">
+                    <h1 className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                        Reviews & Testimonials
+                    </h1>
+                    <p className="text-sm md:text-lg text-gray-600 dark:text-gray-300 mt-2">
+                        What colleagues and companies say about my work
+                    </p>
                 </div>
-                
-                {/* Unified scroll indicators for all screen sizes */}
-                <ScrollIndicator 
-                    currentIndex={currentIndex} 
-                    totalItems={reviews.length} 
-                    onScrollTo={scrollToIndex}
-                />
-            </div>
 
-            {/* Scroll hint for mobile */}
-            <div className="lg:hidden mt-2 text-sm text-gray-500 text-center">
-                ← Swipe to see more reviews →
+                {/* Reviews Container */}
+                <div className="w-screen -mx-4 overflow-hidden">
+                    <div className="w-full items-center justify-center">
+                        <div className="relative w-full max-w-[1000px] lg:max-w-[1200px] xl:max-w-[1400px] mx-auto md:mx-0 p-2">
+                            <div 
+                                ref={scrollContainerRef}
+                                className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth p-4"
+                                style={{ 
+                                    scrollbarWidth: 'none', 
+                                    msOverflowStyle: 'none',
+                                    WebkitOverflowScrolling: 'touch',
+                                    width: '100%'
+                                }}
+                            >
+                                {reviews.map((review) => (
+                                    <ReviewCard key={review.name} {...review} />
+                                ))}
+                            </div>
+                        </div>
+                        
+                        {/* Scroll indicators */}
+                        <ScrollIndicator 
+                            currentIndex={currentIndex} 
+                            totalItems={reviews.length} 
+                            onScrollTo={scrollToIndex}
+                        />
+                    </div>
+
+                    {/* Scroll hint for mobile */}
+                    {/* <div className="lg:hidden mt-4 text-sm text-gray-500 dark:text-gray-400 text-center">
+                        ← Swipe to see more reviews →
+                    </div> */}
+                </div>
             </div>
         </div>
     );

@@ -1,11 +1,14 @@
 import { SiMinutemailer } from "react-icons/si";
 const Contact = () => {
     return (
-        <div className="flex flex-col items-center justify-center pb-16 pt-16 w-full">
-            <h1 className="text-[36px]">
-                Contact
-            </h1>
-            <div className="border-cyan-200 px-2 ">
+        <div className="flex flex-col w-full items-center justify-center px-4">
+            <div className="w-full max-w-6xl">
+                <div className="text-center md:text-left mb-2">
+                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                        Contact
+                    </h1>
+                </div>
+                <div className="border-cyan-200 px-2">
                 <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
                     <div className="flex-1 max-w-[700px] border border-cyan-200 rounded-lg p-10 bg-gray-700 bg-opacity-25">
                         <div className="flex justify-between">
@@ -21,6 +24,7 @@ const Contact = () => {
                         </h2>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     ) 

@@ -1,45 +1,184 @@
 import Image from "next/image";
+import { FaCode, FaGraduationCap, FaRocket, FaHeart, FaBrain, FaUsers, FaLightbulb } from "react-icons/fa";
 
 const About = () => {
     return (
-        <div className = "flex flex-col w-full items-center justify-center px-4 pt-12 pb-8">
-            <h1 className = "text-[36px] font-bold pb-2">
+        <div className="flex flex-col w-full items-center justify-center px-4">
+            {/* Hero Section */}
+            <div className="w-full max-w-6xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-12">
+                    {/* <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 About Me
-            </h1>
-            <div className = "flex flex-col md:flex-row gap-4 items-center md:items-start">
-                
-                <div className = "flex-1 max-w-[1200px] rounded-t-xl">
-                <div className="">
-                    <p className="indent-5">
-                        I'm a Senior Full Stack Engineer with expertise in full-stack development, cloud engineering, and multi-agent AI systems. I hold a B.S. in Computer Science from the University of Central Florida and bring over 3 years of industry experience delivering scalable, high-performance solutions.
-                    </p>
+            </h1> */}
+                </div>
 
-                    <br />
+                {/* Main Content */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-8">
+                    {/* Left Column - Profile Card Only (Desktop) */}
+                    <div className="lg:col-span-1">
+                        {/* Profile Card */}
+                        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-4 md:p-8 text-center">
+                            <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden relative">
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full p-1">
+                                    <div className="w-full h-full rounded-full overflow-hidden">
+                                        <Image 
+                                            src="/images/grad3.jpeg" 
+                                            alt="Alejandro Urrea" 
+                                            width={128} 
+                                            height={128} 
+                                            className="w-full h-full object-cover" 
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Alejandro Urrea</h2>
+                            <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold mb-4">Senior Full Stack Engineer</p>
+                            <p className="text-base text-gray-600 dark:text-gray-300">
+                                B.S. Computer Science<br />
+                                University of Central Florida
+                            </p>
+                        </div>
 
-                    <p className="indent-5">
-                        At AlterCall, I design and implement multi-agent AI architectures and build robust, end-to-end applications using Python, LangGraph, OpenAI, JavaScript, TypeScript, React, Node.js, PostgreSQL, and AWS. My work spans front-end development — integrating Figma designs into React — and back-end systems, including efficient server-side logic and database structures.
-                    </p>
+                        {/* Mission Card - Desktop Only */}
+                        <div className="hidden lg:block mt-6">
+                            <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-4 md:p-6 text-white text-center">
+                                <h3 className="text-2xl font-bold mb-3">My Mission</h3>
+                                <p className="text-base leading-relaxed">
+                                    To drive innovation through technology, deliver impactful solutions that solve real-world problems, 
+                                    and continuously grow as an engineer while contributing to forward-thinking teams that shape the future.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <br />
+                    {/* Right Column - Main Story */}
+                    <div className="lg:col-span-2 flex">
+                        <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-4 md:p-8 w-full flex flex-col max-h-[350px] md:max-h-full overflow-y-auto">
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center md:text-left">My Journey</h3>
+                            <div className="space-y-6 flex-1 flex flex-col justify-center">
+                                <p className="text-base md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    I'm a <span className="font-semibold text-blue-600 dark:text-blue-400">Senior Full Stack Engineer</span> with expertise in full-stack development, cloud engineering, and multi-agent AI systems. With over 3 years of industry experience, I specialize in delivering scalable, high-performance solutions that drive real business impact.
+                                </p>
+                                
+                                <p className="text-base md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    At <span className="font-semibold text-purple-600 dark:text-purple-400">AlterCall</span>, I design and implement multi-agent AI architectures using Python, LangGraph, and OpenAI, while building robust applications with React, Node.js, and AWS. My work spans from transforming Figma designs into pixel-perfect React components to architecting scalable backend systems.
+                                </p>
+                                
+                                <p className="text-base md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    Previously, I led backend development for a social networking application, building custom algorithms and integrating AWS services. I thrive in fast-paced, collaborative environments using Agile methodologies and love exploring machine learning, robot vision, and AI projects in my free time.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <p className="indent-5">
-                        Previously, I led back-end development for a fully responsive social networking application, building custom algorithms, improving scalability, and integrating AWS services like S3, API Gateway, MySQL RDS, Prisma ORM, and Lambda.
-                    </p>
+                {/* Mission Card - Mobile Only */}
+                <div className="lg:hidden md:mb-4">
+                    <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-4 md:p-6 text-white text-center">
+                        <h3 className="text-2xl font-bold mb-3">My Mission</h3>
+                        <p className="text-lg leading-relaxed">
+                            To drive innovation through technology, deliver impactful solutions that solve real-world problems, 
+                            and continuously grow as an engineer while contributing to forward-thinking teams that shape the future.
+                        </p>
+                    </div>
+                </div>
 
-                    <br />
+                {/* Skills & Interests Section */}
+                <div className="mb-2">
+                    {/* Desktop Grid Layout */}
+                    <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
+                        {/* Technical Skills */}
+                        <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl p-4 md:p-6 border border-blue-200 dark:border-blue-800">
+                            <FaCode className="text-3xl text-blue-600 dark:text-blue-400 mb-4" />
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Technical Skills</h3>
+                            <p className="text-base text-gray-600 dark:text-gray-300">
+                                Full-stack development, AI/ML systems, cloud architecture, and database design
+                            </p>
+                        </div>
 
-                    <p className="indent-5">
-                        I work best in fast-paced, collaborative environments, applying Agile methodologies, thorough documentation, and Jira for progress tracking. Outside of work, I've built projects in machine learning, robot vision, and AI, deepening my skills in data analysis, database management, and neural network design.
-                    </p>
+                        {/* Education */}
+                        <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl p-4 md:p-6 border border-green-200 dark:border-green-800">
+                            <FaGraduationCap className="text-3xl text-green-600 dark:text-green-400 mb-4" />
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Education</h3>
+                            <p className="text-base text-gray-600 dark:text-gray-300">
+                                B.S. Computer Science from UCF with focus on AI and software engineering
+                            </p>
+                        </div>
 
-                    <br />
+                        {/* Innovation */}
+                        <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl p-4 md:p-6 border border-purple-200 dark:border-purple-800">
+                            <FaLightbulb className="text-3xl text-purple-600 dark:text-purple-400 mb-4" />
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Innovation</h3>
+                            <p className="text-base text-gray-600 dark:text-gray-300">
+                                Passionate about AI, machine learning, and building solutions that make a difference
+                            </p>
+                        </div>
 
-                    <p className="indent-5">
-                    My goal is to drive innovation, deliver impactful solutions, and continue growing as an engineer within a forward-thinking team.
-                    </p>
+                        {/* Collaboration */}
+                        <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-xl p-4 md:p-6 border border-orange-200 dark:border-orange-800">
+                            <FaUsers className="text-3xl text-orange-600 dark:text-orange-400 mb-4" />
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Collaboration</h3>
+                            <p className="text-base text-gray-600 dark:text-gray-300">
+                                Agile methodologies, team leadership, and cross-functional collaboration
+                            </p>
+                        </div>
+                    </div>
 
+                    {/* Mobile Horizontal Scroll Gallery */}
+                    <div className="md:hidden w-screen -mx-4 overflow-hidden">
+                        <div className="w-full items-center justify-center">
+                            <div className="relative w-full max-w-[1000px] mx-auto py-2">
+                                <div 
+                                    className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth p-4"
+                                    style={{ 
+                                        scrollbarWidth: 'none', 
+                                        msOverflowStyle: 'none',
+                                        WebkitOverflowScrolling: 'touch',
+                                        width: '100%'
+                                    }}
+                                >
+                                    {/* Technical Skills */}
+                                    <div className="flex-shrink-0 w-72 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl p-4 md:p-6 border border-blue-200 dark:border-blue-800 snap-center">
+                                        <FaCode className="text-3xl text-blue-600 dark:text-blue-400 mb-4" />
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Technical Skills</h3>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                                            Full-stack development, AI/ML systems, cloud architecture, and database design
+                                        </p>
+                                    </div>
+
+                                    {/* Education */}
+                                    <div className="flex-shrink-0 w-72 bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl p-4 md:p-6 border border-green-200 dark:border-green-800 snap-center">
+                                        <FaGraduationCap className="text-3xl text-green-600 dark:text-green-400 mb-4" />
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Education</h3>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                                            B.S. Computer Science from UCF with focus on AI and software engineering
+                                        </p>
+                                    </div>
+
+                                    {/* Innovation */}
+                                    <div className="flex-shrink-0 w-72 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl p-4 md:p-6 border border-purple-200 dark:border-purple-800 snap-center">
+                                        <FaLightbulb className="text-3xl text-purple-600 dark:text-purple-400 mb-4" />
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Innovation</h3>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                                            Passionate about AI, machine learning, and building solutions that make a difference
+                                        </p>
+                                    </div>
+
+                                    {/* Collaboration */}
+                                    <div className="flex-shrink-0 w-72 bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-xl p-4 md:p-6 border border-orange-200 dark:border-orange-800 snap-center">
+                                        <FaUsers className="text-3xl text-orange-600 dark:text-orange-400 mb-4" />
+                                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Collaboration</h3>
+                                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                                            Agile methodologies, team leadership, and cross-functional collaboration
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 </div>
+
             </div>
         </div>
     )

@@ -304,39 +304,7 @@ transform: translate(40px, 50px); */
 
 .item:hover {  transform: rotate(15deg);}
 
-.projectCard {
-  padding: 0.5rem 0.25rem;
-  width: 350px;
-  background: rgba(161, 159, 159, 0.095); /* Light mode base: semi-transparent black */
-  border-radius: 0.5rem;
-  border: 1px solid rgba(53, 52, 52, 0.67); /* subtle white border */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: background 0.3s ease, border 0.3s ease;
-}
-
-.projectCard:hover {
-  background: rgba(182, 180, 180, 0.323); /* slightly more visible on hover */
-}
-
-/* Dark mode override */
-@media (prefers-color-scheme: dark) {
-  .projectCard {
-    background: rgba(255, 255, 255, 0.1); /* semi-transparent white in dark mode */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .projectCard:hover {
-    background: rgba(255, 255, 255, 0.15);
-  }
-}
-
-/* Responsive */
-@media (min-width: 768px) {
-  .projectCard {
-    width: 400px;
-  }
-}
+/* Project card styles removed - now handled by Tailwind classes in component */
 
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
@@ -369,4 +337,30 @@ transform: translate(40px, 50px); */
 }
 .scrollbar-hide::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
+}
+
+/* Section spacing utility classes */
+.section-spacing {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    scroll-margin-top: 100px;
+}
+
+.section-spacing-tight {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    scroll-margin-top: 100px;
+}
+
+/* Responsive section spacing */
+@media (max-width: 768px) {
+    .section-spacing {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .section-spacing-tight {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 }

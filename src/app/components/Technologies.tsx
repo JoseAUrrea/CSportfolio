@@ -1,78 +1,98 @@
-import { Card, CardBody } from "@nextui-org/react";
 import { TechListTypes } from "../types";
+import { FaCode, FaDatabase, FaCloud, FaProjectDiagram, FaPalette } from "react-icons/fa";
 
 const Technologies = ({ techList }: TechListTypes) => {
 
-    const programmingLanguagesAndFrameworks = ["Python", "C", "C++", "C#", ".NET", "Java", "JavaScript", "TypeScript", "CSS", "HTML5", "NodeJS", "NextJS", "PHP", "Swift", "React", "Angular", "Vue"];
-    const backendAndDatabases = ["SQL", "MongoDB", "Prisma", "PostgreSQL", "MySQL", "SQLite", "Restful", "ORMs"];
-    const devOpsAndCloud = ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "Git", "GitHub", "GitLab"];
-    const projectDesignAndMethodologies = ["Agile", "Scrum", "Jira", "Trello", "Figma", "Discord", "Slack"];
-    const designAndMultimedia = ["Adobe", "Premiere Pro", "Creative Cloud"];
+    const techCategories = [
+        {
+            title: "Programming Languages & Frameworks",
+            icon: FaCode,
+            color: "blue",
+            technologies: ["Python", "C", "C++", "C#", ".NET", "Java", "JavaScript", "TypeScript", "CSS", "HTML5", "NodeJS", "NextJS", "PHP", "Swift", "React", "Angular", "Vue"]
+        },
+        {
+            title: "Backend & Database",
+            icon: FaDatabase,
+            color: "green",
+            technologies: ["SQL", "MongoDB", "Prisma", "PostgreSQL", "MySQL", "SQLite", "Restful", "ORMs"]
+        },
+        {
+            title: "DevOps & Cloud",
+            icon: FaCloud,
+            color: "purple",
+            technologies: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD", "Git", "GitHub", "GitLab"]
+        },
+        {
+            title: "Project Design & Methodologies",
+            icon: FaProjectDiagram,
+            color: "orange",
+            technologies: ["Agile", "Scrum", "Jira", "Trello", "Figma", "Discord", "Slack"]
+        },
+        {
+            title: "Design & Multimedia",
+            icon: FaPalette,
+            color: "pink",
+            technologies: ["Adobe", "Premiere Pro", "Creative Cloud"]
+        }
+    ];
+
+    const TechnologyTag = ({ tech }: { tech: string }) => (
+        <span className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200">
+            {tech}
+        </span>
+    );
+
     return (
-        <div className="flex flex-col items-center px-4 py-16 max-w-[1200px] border-b border-gray-300">
-            
-            <h1 className="text-[36px] font-bold pb-2 mb-6">
-                Technologies
-            </h1>
-            
-            <h2 className="text-[20px] pb-4">Programming Languages and Frameworks</h2>
-            <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-8 pb-16 border-gray-300 w-full"> 
-            {programmingLanguagesAndFrameworks.map((tech, index) => (
-                <Card key={index} className="max-w-[800px] px-4 py-2 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-md 
-                    bg-gradient-to-l from-[rgba(6,182,212,0.4)] to-[rgba(59,130,246,0.4)]">
-                    <CardBody className="flex items-center justify-center">
-                        <p>{tech}</p>
-                    </CardBody>
-                </Card>
-            ))}
-            </div>
-            
-            <h2 className="text-[20px] pb-4">Backend and Database</h2>
-            <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-8 pb-16 border-gray-300 w-full"> 
-            {backendAndDatabases.map((tech, index) => (
-                <Card key={index} className="max-w-[800px] px-4 py-2 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-md 
-                    bg-gradient-to-l from-[rgba(6,182,212,0.4)] to-[rgba(59,130,246,0.4)]">
-                    <CardBody className="flex items-center justify-center">
-                        <p>{tech}</p>
-                    </CardBody>
-                </Card>
-            ))}
-            </div>
-            
-            <h2 className="text-[20px] pb-4">DevOps and Cloud</h2>
-            <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-8 pb-16 border-gray-300 w-full"> 
-            {devOpsAndCloud.map((tech, index) => (
-                <Card key={index} className="max-w-[800px] px-4 py-2 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-md 
-                    bg-gradient-to-l from-[rgba(6,182,212,0.4)] to-[rgba(59,130,246,0.4)]">
-                    <CardBody className="flex items-center">
-                        <p>{tech}</p>
-                    </CardBody>
-                </Card>
-            ))}
-            </div>
+        <div className="flex flex-col w-full items-center justify-center px-4">
+            <div className="w-full max-w-6xl">
+                {/* Header */}
+                <div className="text-center md:text-left mb-8">
+                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                            Technologies & Skills
+                    </h1>
+                    <p className="text-base md:text-lg text-gray-600 dark:text-gray-300">
+                        Technologies and skills I have worked with    
+                    </p>
+                </div>
+                {/* Technology Categories */}
+                <div className="space-y-6">
+                    {techCategories.map((category, categoryIndex) => {
+                        const colorClasses = {
+                            blue: "bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800",
+                            green: "bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800",
+                            purple: "bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-800",
+                            orange: "bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800",
+                            pink: "bg-pink-50 dark:bg-pink-900/20 border-pink-200 dark:border-pink-800"
+                        };
 
-            <h2 className="text-[20px] pb-4">Project Design and Methodologies</h2>
-            <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-8 pb-16 border-gray-300 w-full"> 
-            {projectDesignAndMethodologies.map((tech, index) => (
-                <Card key={index} className="max-w-[800px] px-4 py-2 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-md 
-                    bg-gradient-to-l from-[rgba(6,182,212,0.4)] to-[rgba(59,130,246,0.4)]">
-                    <CardBody className="flex items-center">
-                        <p>{tech}</p>
-                    </CardBody>
-                </Card>
-            ))}
-            </div>
+                        const iconColorClasses = {
+                            blue: "text-blue-600 dark:text-blue-400",
+                            green: "text-green-600 dark:text-green-400",
+                            purple: "text-purple-600 dark:text-purple-400",
+                            orange: "text-orange-600 dark:text-orange-400",
+                            pink: "text-pink-600 dark:text-pink-400"
+                        };
 
-            <h2 className="text-[20px] pb-4">Design and Multimedia</h2>
-            <div className = "grid lg:grid-cols-6 md:grid-cols-5 grid-cols-3 gap-8 pb-16 border-gray-300 w-full"> 
-            {designAndMultimedia.map((tech, index) => (
-                <Card key={index} className="max-w-[800px] px-4 py-2 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-md 
-                    bg-gradient-to-l from-[rgba(6,182,212,0.4)] to-[rgba(59,130,246,0.4)]">
-                    <CardBody className="flex items-center">
-                        <p>{tech}</p>
-                    </CardBody>
-                </Card>
-            ))}
+                        return (
+                            <div key={categoryIndex} className={`rounded-2xl border-2 p-8 ${colorClasses[category.color as keyof typeof colorClasses]}`}>
+                                {/* Category Header */}
+                                <div className="flex items-center space-x-3 mb-6">
+                                    <category.icon className={`text-xl ${iconColorClasses[category.color as keyof typeof iconColorClasses]}`} />
+                                    <h2 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
+                                        {category.title}
+                                    </h2>
+                                </div>
+
+                                {/* Technology Tags */}
+                                <div className="flex flex-wrap gap-3">
+                                    {category.technologies.map((tech, techIndex) => (
+                                        <TechnologyTag key={techIndex} tech={tech} />
+                                    ))}
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
         </div>
         
