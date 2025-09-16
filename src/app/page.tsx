@@ -95,7 +95,7 @@ export default function Home() {
           <span className='text-xl md:text-2xl ml-2 font-bold'>Los Angeles, CA</span>
         </p>
 
-        <nav className="flex justify-center mt-10 mb-16 pb-2 z-20 overflow-auto border-b-2">
+        <nav className="flex justify-center mt-10 mb-4 z-20 overflow-auto border-b-2">
           <div className="flex space-x-4 sm:space-x-6">
           <a
             href="#about"
