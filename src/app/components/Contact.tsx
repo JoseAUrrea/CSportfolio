@@ -8,18 +8,18 @@ const Contact = () => {
                         Contact
                     </h1>
                 </div>
-                <div className="border-cyan-200 px-2">
-                <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
-                    <div className="flex-1 max-w-[700px] border border-cyan-200 rounded-lg p-10 bg-gray-700 bg-opacity-25">
-                        <div className="flex justify-between">
-                        <h1 className="text-[20px] font-bold">
-                            Email
-                        </h1>
-                        <a href="mailto:joseurrea6135@gmail.com">
-                            <SiMinutemailer className="w-[25px] h-[25px] text-cyan-500 animate-pulse"/>
-                        </a>
+                <div className="glass-subtle px-2 w-full md:w-1/2">
+                <div className="flex flex-col md:flex-row gap-4 items-start">
+                    <div className="flex flex-col w-full gap-2 py-10 px-4">
+                        <div className="flex w-full justify-between">
+                            <h1 className="text-lg md:text-2xl font-bold">
+                                Email
+                            </h1>
+                            <a href="mailto:joseurrea6135@gmail.com">
+                                <SiMinutemailer className="w-[25px] h-[25px] text-cyan-500 animate-pulse"/>
+                            </a>
                         </div>
-                        <h2 className="text-[16px]">
+                        <h2 className="text-base md:text-lg">
                             joseurrea6135@gmail.com
                         </h2>
                     </div>

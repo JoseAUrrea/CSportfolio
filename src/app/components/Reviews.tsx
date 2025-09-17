@@ -6,7 +6,7 @@ import { FaQuoteLeft, FaExternalLinkAlt, FaStar } from 'react-icons/fa';
 const ReviewCard = ({ name, review, link }: { name: string; review: string; link: string }) => {
     return (
         <div 
-            className="flex flex-col bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-6 h-[350px] hover:shadow-2xl cursor-pointer overflow-hidden w-[320px] sm:w-[360px] md:w-[500px] lg:w-[600px] xl:w-[700px] flex-shrink-0 snap-center transition-all duration-300 hover:scale-[1.02] group" 
+            className="flex flex-col glass-subtle rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-6 h-[350px] hover:shadow-2xl cursor-pointer overflow-hidden w-[320px] sm:w-[360px] md:w-[500px] lg:w-[600px] xl:w-[700px] flex-shrink-0 snap-center transition-all duration-300 hover:scale-[1.02] group" 
             onClick={() => window.open(link, "_blank")}
             style={{ minWidth: '320px' }}
         >
@@ -180,7 +180,7 @@ const Reviews = () => {
                 {/* Reviews Container */}
                 <div className="w-screen -mx-4 overflow-hidden">
                     <div className="w-full items-center justify-center">
-                        <div className="relative w-full max-w-[1000px] lg:max-w-[1200px] xl:max-w-[1400px] mx-auto md:mx-0 p-2">
+                        <div className="relative w-full max-w-[1000px] md:max-w-[1200px] mx-auto md:mx-0 p-2">
                             <div 
                                 ref={scrollContainerRef}
                                 className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth p-4"
@@ -195,14 +195,16 @@ const Reviews = () => {
                                     <ReviewCard key={review.name} {...review} />
                                 ))}
                             </div>
+                            
+                            {/* Scroll indicators */}
+                            <ScrollIndicator 
+                                currentIndex={currentIndex} 
+                                totalItems={reviews.length} 
+                                onScrollTo={scrollToIndex}
+                            />
                         </div>
                         
-                        {/* Scroll indicators */}
-                        <ScrollIndicator 
-                            currentIndex={currentIndex} 
-                            totalItems={reviews.length} 
-                            onScrollTo={scrollToIndex}
-                        />
+
                     </div>
 
                     {/* Scroll hint for mobile */}

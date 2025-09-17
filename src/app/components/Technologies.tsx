@@ -74,7 +74,7 @@ const Technologies = ({ techList }: TechListTypes) => {
                         };
 
                         return (
-                            <div key={categoryIndex} className={`rounded-2xl border-2 p-8 ${colorClasses[category.color as keyof typeof colorClasses]}`}>
+                            <div key={categoryIndex} className={`glass-subtle p-8`}>
                                 {/* Category Header */}
                                 <div className="flex items-center space-x-3 mb-6">
                                     <category.icon className={`text-xl ${iconColorClasses[category.color as keyof typeof iconColorClasses]}`} />

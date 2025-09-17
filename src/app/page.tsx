@@ -9,7 +9,7 @@ import Experience from './components/Experience';
 import Reviews from './components/Reviews';
 import { CiLocationOn } from "react-icons/ci";
 import { AiTwotoneCode } from "react-icons/ai";
-import { FaInfoCircle, FaSuitcase, FaTools, FaCode, FaGraduationCap, FaEnvelope } from 'react-icons/fa';
+import { FaInfoCircle, FaSuitcase, FaTools, FaCode, FaGraduationCap, FaEnvelope, FaUser, FaRocket } from 'react-icons/fa';
 
 export default function Home() {
 
@@ -29,142 +29,78 @@ export default function Home() {
   ];
 
   return (
+    <div className="animated-background min-h-screen">
+      {/* Hero Section */}
+      <div className="flex flex-col items-center justify-center pt-20 px-4">
+        <div className="w-full max-w-6xl">
+          {/* Main Hero Card */}
+          <div className=" overflow-hidden mb-2">
+            {/* Gradient Header */}
+            <div className=" p-8 md:p-12 text-center">
+              <div className="flex flex-col items-center space-y-4">
+                {/* Main Title */}
+                <div className="space-y-2">
+                  <h1 className="text-4xl md:text-6xl font-bold">
+                    Software Engineer
+                  </h1>
+                  <h2 className="text-2xl md:text-3xl font-semibold">
+                    AI & Full-Stack Innovation
+                  </h2>
+                </div>
+                
+                {/* Value Proposition */}
+                <div className="max-w-3xl">
+                  <p className="text-base md:text-xl leading-relaxed">
+                    I create intelligent, scalable solutions that bridge the gap between cutting-edge AI technology 
+                    and real-world business impact. From multi-agent AI systems to robust full-stack applications.
+                  </p>
+                </div>
 
-      <div className="animated-background flex flex-col items-center pt-[70px] z-20 pb-10">
-          
-          <div className='flex flex-col justify-center items-center pt-[20px]'>
-            <div className='flex flex-col justify-center items-center '>
-            <h1 className="text-[40px] font-bold">
-            </h1>
-            </div>
-            {/* <h1 className="text-[32px] md:text-[50px] font-bold animate-slideIn px-6 py-1 rounded-full 
-               bg-clip-padding backdrop-filter backdrop-blur-md 
-               bg-gradient-to-l from-[rgba(6,182,212,0.4)] to-[rgba(59,130,246,0.4)]">
-              Jose Alejandro Urrea
-            </h1> */}
-            <p className="flex items-center text-[36px] md:text-[60px] font-bold mb-4">
-              <span> Full Stack & AI Engineer</span>
-            </p>
-          </div>
-
-
-        {/* <Model /> */}
-
-
-
-        <hr></hr>
-
-
-        {/* <div className="flex justify-center items-center relative max-w-[400px]">
-          <Image
-            src="/images/grad2.jpeg"
-            alt="Picture of the author"
-            objectFit="cover"
-            layout="responsive"
-            className="rounded-xl"
-            width={500}
-            height={300}
-          />
-        </div> */}
-
-        {/* <div className="projectLayout">
-          {photos.map((photo, index) => (
-            <div key={index} className="item">
-              <Image
-                src={photo.src}
-                alt={photo.description}
-                objectFit="cover"
-                layout="responsive"
-                className="rounded-xl"
-                width={500}
-                height={300}
-              />
-              <div className="content">
-                <p>{photo.description}</p>
+                {/* Key Highlights */}
+                {/* <div className="grid grid-cols-3 md:grid-cols-3 gap-2 w-full max-w-full">
+                  <div className="glass-subtle rounded-xl p-4 text-center">
+                    <FaRocket className="text-lg md:text-2xl mb-2 mx-auto" />
+                    <p className="text-sm md:text-base font-semibold">AI Systems</p>
+                  </div>
+                  <div className="glass-subtle rounded-xl p-4 text-center">
+                    <FaCode className="text-lg md:text-2xl mb-2 mx-auto" />
+                    <p className="text-sm md:text-base font-semibold">Full-Stack</p>
+                  </div>
+                  <div className="glass-subtle rounded-xl p-4 text-center">
+                    <FaTools className="text-lg md:text-2xl mb-2 mx-auto" />
+                    <p className="text-sm md:text-base font-semibold">Cloud</p>
+                  </div>
+                </div> */}
               </div>
             </div>
-          ))}
-        </div> */}
+            {/* Divider */}
+              <div className="h-[1px] gradient-bg w-2/3 mx-auto from-blue-500 to-purple-500"></div>
 
-        {/* <FlipCard /> */}
-
-
-
-        <p className='flex items-center pb-6 mt-2 text-[30px]'>
-          <CiLocationOn className="inline-block text-2xl md:text-3xl" />
-          <span className='text-xl md:text-2xl ml-2 font-bold'>Los Angeles, CA</span>
-        </p>
-
-        <nav className="flex justify-center mt-10 mb-4 z-20 overflow-auto border-b-2">
-          <div className="flex space-x-4 sm:space-x-6">
-          <a
-            href="#about"
-            className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
-                      hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
-                      hover:bg-gradient-to-l 
-                      hover:bg-blue-500
-                      transition-all duration-300 ease-in-out"
-          >
-            <span className="hidden sm:inline text-[20px] font-bold">About</span>
-            <FaInfoCircle className="sm:hidden text-2xl" />
-          </a>
-            <a
-              href="#experience"
-              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
-                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
-                        hover:bg-gradient-to-l 
-                        hover:bg-blue-500
-                        transition-all duration-300 ease-in-out"
-            >
-              <span className="hidden sm:inline text-[20px] font-bold">Experience</span>
-              <FaSuitcase className="sm:hidden text-2xl" />
-            </a>
-            <a
-              href="#technologies"
-              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
-                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
-                        hover:bg-gradient-to-l 
-                        hover:bg-blue-500
-                        transition-all duration-300 ease-in-out"
-            >
-              <span className="hidden sm:inline text-[20px] font-bold">Technologies</span>
-              <FaTools className="sm:hidden text-2xl" />
-            </a>
-            <a
-              href="#projects"
-              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
-                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
-                        hover:bg-gradient-to-l 
-                        hover:bg-blue-500
-                        transition-all duration-300 ease-in-out"
-            >
-              <span className="hidden sm:inline text-[20px] font-bold">Projects</span>
-              <FaCode className="sm:hidden text-2xl" />
-            </a>
-            <a
-              href="#education"
-              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
-                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
-                        hover:bg-gradient-to-l 
-                        hover:bg-blue-500
-                        transition-all duration-300 ease-in-out"
-            >
-              <span className="hidden sm:inline text-[20px] font-bold">Education</span>
-              <FaGraduationCap className="sm:hidden text-2xl" />
-            </a>
-            <a
-              href="#contact"
-              className="tab rounded py-2 md:px-6 px-1 flex items-center justify-center md:text-xl 
-                        hover:bg-clip-padding hover:backdrop-filter hover:backdrop-blur-md 
-                        hover:bg-gradient-to-l 
-                        hover:bg-blue-500
-                        transition-all duration-300 ease-in-out"
-            >
-              <span className="hidden sm:inline text-[20px] font-bold">Contact</span>
-              <FaEnvelope className="sm:hidden text-2xl" />
-            </a>
+            {/* Navigation Tabs */}
+            <div className="p-4 md:p-8">
+              <nav className="flex flex-wrap justify-center gap-2 md:gap-4">
+                {[
+                  { href: "#about", label: "About", icon: FaUser },
+                  { href: "#experience", label: "Experience", icon: FaSuitcase },
+                  { href: "#technologies", label: "Technologies", icon: FaTools },
+                  { href: "#projects", label: "Projects", icon: FaCode },
+                  { href: "#education", label: "Education", icon: FaGraduationCap },
+                  { href: "#contact", label: "Contact", icon: FaEnvelope }
+                ].map(({ href, label, icon: Icon }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    className="group flex items-center gap-2 px-4 py-3 rounded-xl font-semibold text-sm md:text-base transition-all duration-300 glass-subtle hover:bg-blue-500 hover:text-white hover:shadow-lg hover:scale-105"
+                  >
+                    <Icon className="text-lg" />
+                    <span className="hidden sm:inline">{label}</span>
+                  </a>
+                ))}
+              </nav>
+            </div>
           </div>
-        </nav>
+        </div>
+      </div>
         
 
         {/* About Section */}
@@ -201,8 +137,9 @@ export default function Home() {
         <div id="contact" className="section-spacing">
             <Contact />
         </div>
-        <div className='h-[200px]'></div>
-      </div>
-
+        
+        {/* Footer Spacing */}
+        <div className='h-[100px]'></div>
+    </div>
   )
 }

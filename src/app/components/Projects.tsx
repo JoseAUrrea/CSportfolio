@@ -149,7 +149,7 @@ const ProjectCard = ({ project }: { project: any }) => {
 
     return (
         <div 
-            className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+            className="glass-effect overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >

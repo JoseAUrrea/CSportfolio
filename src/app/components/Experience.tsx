@@ -271,7 +271,7 @@ const CategoryCard = ({ title, icon: Icon, color, items, isOpen, onToggle }: {
     };
 
     return (
-        <div className={`rounded-lg border-2 transition-all duration-300 ${colorClasses[color as keyof typeof colorClasses]} ${isOpen ? 'shadow-lg' : 'shadow-md hover:shadow-lg'}`}>
+        <div className={`glass-subtle transition-all duration-300 ${isOpen ? 'shadow-lg' : 'shadow-md hover:shadow-lg'}`}>
             <button
                 onClick={onToggle}
                 className="w-full p-4 flex items-center justify-between hover:bg-opacity-50 transition-colors duration-200"
@@ -279,21 +279,21 @@ const CategoryCard = ({ title, icon: Icon, color, items, isOpen, onToggle }: {
                 <div className="flex items-center space-x-3">
                     <Icon className={`text-xl ${iconColorClasses[color as keyof typeof iconColorClasses]}`} />
                     <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">({items.length} items)</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-200">({items.length} items)</span>
                 </div>
                 <FaChevronDown 
-                    className={`text-gray-500 dark:text-gray-400 transition-transform duration-200 ${isOpen ? "rotate-180" : "rotate-0"}`} 
+                    className={`text-gray-500 dark:text-gray-200 transition-transform duration-200 ${isOpen ? "rotate-180" : "rotate-0"}`} 
                 />
             </button>
             {isOpen && (
                 <div className="px-4 pb-4 space-y-3 max-h-[300px] overflow-y-auto">
                     {items.map((item, index) => (
-                        <div key={index} className="bg-white dark:bg-gray-800 rounded-lg p-3 shadow-sm">
+                        <div key={index} className="rounded-lg p-3 shadow-sm">
                             <h4 className="font-medium text-gray-900 dark:text-white mb-2">{item.title}</h4>
                             <ul className="space-y-1">
                                 {item.details.map((detail: string, detailIndex: number) => (
-                                    <li key={detailIndex} className="text-sm text-gray-600 dark:text-gray-300 flex items-start">
-                                        <span className="w-1.5 h-1.5 bg-gray-400 dark:bg-gray-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                                    <li key={detailIndex} className="text-sm text-gray-600 dark:text-white flex items-start">
+                                        <span className="w-1.5 h-1.5 bg-gray-400 dark:bg-gray-200 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                                         {detail}
                                     </li>
                                 ))}
@@ -332,53 +332,55 @@ const Experience = () => {
                     </p>
                 </div>
 
+                {/* Role Tabs */}
+                <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
+                    {Object.keys(experienceData).map((role) => (
+                        <button
+                            key={role}
+                            onClick={() => setActiveRole(role)}
+                            className={`text-sm md:text-base px-4 md:px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                                activeRole === role
+                                    ? 'bg-blue-500 text-white shadow-lg transform scale-105'
+                                    : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                            }`}
+                        >
+                            {role}
+                        </button>
+                    ))}
+                </div>
+
                 {/* Experience Card */}
-                <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+                <div className="glass-effect overflow-hidden">
                     
                     {/* Header Section */}
-                    <div className="px-8 pt-8 ">
-                        {/* Role Tabs */}
-                        <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
-                            {Object.keys(experienceData).map((role) => (
-                                <button
-                                    key={role}
-                                    onClick={() => setActiveRole(role)}
-                                    className={`text-sm md:text-base px-4 md:px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                                        activeRole === role
-                                            ? 'bg-blue-500 text-white shadow-lg transform scale-105'
-                                            : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                                    }`}
-                                >
-                                    {role}
-                                </button>
-                            ))}
-                        </div>
+                    <div className=" bg-gradient-to-r from-blue-500 to-purple-500 px-8 py-8 ">
                         <div className="flex flex-col md:flex-row md:justify-between">
                             <div className="flex flex-col">
-                                <h3 className="text-xl md:text-2xl font-bold mb-2">{activeRole}</h3>
+                                <h3 className="text-xl md:text-2xl font-bold mb-2 text-white">{activeRole}</h3>
                                 <div className="flex items-center space-x-2 mb-2">
-                                    <FaMapMarkerAlt className="text-lg" />
-                                    <span className="text-base md:text-lg font-semibold">{currentExperience.company}</span>
+                                    <FaMapMarkerAlt className="text-lg text-white" />
+                                    <span className="text-base md:text-lg font-semibold text-white">{currentExperience.company}</span>
                                 </div>
                                 <div className="flex items-center space-x-2">
-                                    <FaCalendarAlt className="text-lg" />
-                                    <span className="text-base md:text-lg">
+                                    <FaCalendarAlt className="text-lg text-white" />
+                                    <span className="text-base md:text-lg text-white">
                                         {currentExperience.dates[0]} - {currentExperience.dates[1]}
                                     </span>
-                                </div>
-                            </div>
-                            <div className="mt-4 md:mt-0 md:w-1/2">
-                                <div className="backdrop-blur-md rounded-lg py-2">
-                                    <p className="text-base md:text-lg leading-relaxed">
-                                        {currentExperience.summary}
-                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <div className="px-4 md:px-8 py-2">
+                        <div className="rounded-lg py-2 px-4 md:px-0">
+                            <p className="text-base md:text-lg leading-relaxed">
+                                {currentExperience.summary}
+                            </p>
+                        </div>
+                    </div>
+
                     {/* Categories Section */}
-                    <div className="pt-8 px-8">
+                    <div className="pt-4 px-8">
                         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Key Responsibilities & Achievements</h3>
                         <div className="space-y-4">
                             {Object.entries(currentExperience.sections).map(([categoryTitle, categoryData]) => (

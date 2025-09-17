@@ -364,3 +364,120 @@ transform: translate(40px, 50px); */
         padding-bottom: 30px;
     }
 }
+
+/* Liquid Glass Effects */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-effect::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    backdrop-filter: blur(1px);
+    box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1), inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+    opacity: 0.6;
+    z-index: -1;
+    filter: blur(1px) drop-shadow(10px 4px 6px rgba(0, 0, 0, 0.1)) brightness(115%);
+}
+
+/* Dark mode glass effect */
+.dark .glass-effect {
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+.dark .glass-effect::after {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 0.1), inset 0px -9px 0px -8px rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced glass effect for hero sections */
+.glass-hero {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem;
+    box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15), inset 0 6px 25px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-radius: 1.5rem;
+    backdrop-filter: blur(2px);
+    box-shadow: inset -15px -10px 0px -12px rgba(255, 255, 255, 0.3), inset 0px -12px 0px -10px rgba(255, 255, 255, 0.2);
+    opacity: 0.8;
+    z-index: -1;
+    filter: blur(1px) drop-shadow(15px 6px 8px rgba(0, 0, 0, 0.1)) brightness(120%);
+}
+
+/* Dark mode hero glass effect */
+.dark .glass-hero {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 6px 25px rgba(255, 255, 255, 0.03);
+}
+
+.dark .glass-hero::after {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: inset -15px -10px 0px -12px rgba(255, 255, 255, 0.1), inset 0px -12px 0px -10px rgba(255, 255, 255, 0.05);
+}
+
+/* Subtle glass effect for smaller cards */
+.glass-subtle {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(31, 38, 135, 0.1), inset 0 2px 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-subtle::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.75rem;
+    backdrop-filter: blur(1px);
+    box-shadow: inset -8px -6px 0px -9px rgba(255, 255, 255, 0.8), inset 0px -6px 0px -6px rgba(255, 255, 255, 0.6);
+    opacity: 0.5;
+    z-index: -1;
+    filter: blur(0.5px) drop-shadow(8px 3px 4px rgba(0, 0, 0, 0.05)) brightness(110%);
+}
+
+/* Dark mode subtle glass effect */
+.dark .glass-subtle {
+    background: rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), inset 0 2px 10px rgba(255, 255, 255, 0.02);
+}
+
+.dark .glass-subtle::after {
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: inset -8px -6px 0px -9px rgba(255, 255, 255, 0.1), inset 0px -6px 0px -6px rgba(255, 255, 255, 0.05);
+}

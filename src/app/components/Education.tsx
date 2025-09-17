@@ -91,7 +91,7 @@ const Education = () => {
                 </div>
 
                 {/* Main Education Card */}
-                <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden mb-8">
+                <div className="glass-effect overflow-hidden mb-8">
                     {/* University Header */}
                     <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 md:p-8">
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
@@ -120,7 +120,7 @@ const Education = () => {
                                     </div>
                                     <div className="flex items-center justify-center md:justify-start gap-2">
                                         <FaCalendarAlt className="text-lg" />
-                                        <span className="text-lg font-medium">2019 - 2023</span>
+                                        <span className="text-lg font-medium">2018 - 2023</span>
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +183,7 @@ const Education = () => {
                 {/* Additional Information Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {/* Certifications */}
-                    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6">
+                    <div className="glass-subtle p-6">
                         <div className="flex items-center gap-3 mb-4">
                             <FaCertificate className="text-xl text-purple-600 dark:text-purple-400" />
                             <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -205,7 +205,7 @@ const Education = () => {
                     </div>
 
                     {/* Languages */}
-                    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6">
+                    <div className="glass-subtle p-6">
                         <div className="flex items-center gap-3 mb-4">
                             <FaLanguage className="text-xl text-blue-600 dark:text-blue-400" />
                             <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -230,7 +230,7 @@ const Education = () => {
                     </div>
 
                     {/* Extracurricular Activities */}
-                    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 md:col-span-2 lg:col-span-1">
+                    <div className="glass-subtle p-6 md:col-span-2 lg:col-span-1">
                         <div className="flex items-center gap-3 mb-4">
                             <FaUsers className="text-xl text-green-600 dark:text-green-400" />
                             <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
