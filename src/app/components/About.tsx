@@ -54,7 +54,7 @@ const About = () => {
 
                     {/* Right Column - Main Story */}
                     <div className="lg:col-span-2 flex">
-                        <div className="glass-effect p-4 md:p-8 w-full flex flex-col max-h-[350px] md:max-h-full overflow-y-auto">
+                        <div className="glass-effect p-4 md:p-8 w-full flex flex-col max-h-[350px] md:max-h-full !overflow-y-auto">
                             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center md:text-left">My Journey</h3>
                             <div className="space-y-6 md:space-y-10 flex-1 flex flex-col justify-center">
                                 <p className="text-base md:text-xl text-gray-600 dark:text-gray-100 leading-relaxed">
