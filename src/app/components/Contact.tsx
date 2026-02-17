@@ -1,33 +1,58 @@
-import { SiMinutemailer } from "react-icons/si";
+import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+
 const Contact = () => {
     return (
-        <div className="flex flex-col w-full items-center justify-center px-4">
-            <div className="w-full max-w-6xl">
-                <div className="text-center md:text-left mb-2">
-                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                        Contact
-                    </h1>
+        <div className="flex flex-col w-full items-center justify-center px-4 sm:px-6">
+            <div className="w-full max-w-4xl">
+                <div className="mb-8">
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Contact</h2>
+                    <p className="text-slate-500 dark:text-slate-400">Get in touch</p>
                 </div>
-                <div className="glass-subtle px-2 w-full md:w-1/2">
-                <div className="flex flex-col md:flex-row gap-4 items-start">
-                    <div className="flex flex-col w-full gap-2 py-10 px-4">
-                        <div className="flex w-full justify-between">
-                            <h1 className="text-lg md:text-2xl font-bold">
-                                Email
-                            </h1>
-                            <a href="mailto:joseurrea6135@gmail.com">
-                                <SiMinutemailer className="w-[25px] h-[25px] text-cyan-500 animate-pulse"/>
-                            </a>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {/* Email */}
+                    <a 
+                        href="mailto:joseurrea6135@gmail.com" 
+                        className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200 group"
+                    >
+                        <div className="flex items-center gap-3 mb-2">
+                            <FaEnvelope className="text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors duration-200" />
+                            <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">Email</span>
                         </div>
-                        <h2 className="text-base md:text-lg">
-                            joseurrea6135@gmail.com
-                        </h2>
-                    </div>
+                        <p className="text-sm text-slate-500 dark:text-slate-400">joseurrea6135@gmail.com</p>
+                    </a>
+
+                    {/* LinkedIn */}
+                    <a 
+                        href="https://www.linkedin.com/in/jose-urrea-profile"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200 group"
+                    >
+                        <div className="flex items-center gap-3 mb-2">
+                            <FaLinkedin className="text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors duration-200" />
+                            <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">LinkedIn</span>
+                        </div>
+                        <p className="text-sm text-slate-500 dark:text-slate-400">jose-urrea-profile</p>
+                    </a>
+
+                    {/* GitHub */}
+                    <a 
+                        href="https://www.github.com/JoseAUrrea/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200 group"
+                    >
+                        <div className="flex items-center gap-3 mb-2">
+                            <FaGithub className="text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors duration-200" />
+                            <span className="text-sm font-semibold text-slate-900 dark:text-slate-100">GitHub</span>
+                        </div>
+                        <p className="text-sm text-slate-500 dark:text-slate-400">JoseAUrrea</p>
+                    </a>
                 </div>
-            </div>
             </div>
         </div>
-    ) 
-}
+    );
+};
 
 export default Contact;

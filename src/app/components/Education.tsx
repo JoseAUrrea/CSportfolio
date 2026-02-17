@@ -2,16 +2,7 @@
 import Image from "next/image";
 import { 
     FaGraduationCap, 
-    FaBook, 
     FaCertificate, 
-    FaLanguage, 
-    FaUsers, 
-    FaMapMarkerAlt,
-    FaCalendarAlt,
-    FaAward,
-    FaCode,
-    FaShieldAlt,
-    FaGlobe
 } from "react-icons/fa";
 
 const Education = () => {
@@ -35,37 +26,17 @@ const Education = () => {
     ];
 
     const certifications = [
-        {
-            name: "Google Technical Support Fundamentals",
-            credential: "TLX57328BEV8",
-            provider: "Google"
-        },
-        {
-            name: "C Programming Course",
-            credential: "1089-17174398",
-            provider: "SoloLearn"
-        },
-        {
-            name: "C# Programming Course", 
-            credential: "CC-05QRQ2WY",
-            provider: "SoloLearn"
-        },
-        {
-            name: "HTML Course",
-            credential: "1014-17174398", 
-            provider: "SoloLearn"
-        },
-        {
-            name: "Microsoft Office Suite",
-            credential: "High School Course",
-            provider: "Microsoft"
-        }
+        { name: "Google Technical Support Fundamentals", provider: "Google", credential: "TLX57328BEV8" },
+        { name: "C Programming Course", provider: "SoloLearn", credential: "1089-17174398" },
+        { name: "C# Programming Course", provider: "SoloLearn", credential: "CC-05QRQ2WY" },
+        { name: "HTML Course", provider: "SoloLearn", credential: "1014-17174398" },
+        { name: "Microsoft Office Suite", provider: "Microsoft", credential: "High School Course" },
     ];
 
     const languages = [
-        { name: "English", level: "Native", flag: "🇺🇸" },
-        { name: "Spanish", level: "Native", flag: "🇨🇴" },
-        { name: "French", level: "Intermediate", flag: "🇫🇷" }
+        { name: "English", level: "Native" },
+        { name: "Spanish", level: "Native" },
+        { name: "French", level: "Intermediate" },
     ];
 
     const extracurriculars = [
@@ -73,85 +44,61 @@ const Education = () => {
         "Colombian Student Association Member"
     ];
 
-    const acknowledgments = [
-        "Multiple Dean's List Recognition"
-    ];
-
     return (
-        <div className="flex flex-col w-full items-center justify-center px-4">
-            <div className="w-full max-w-6xl">
+        <div className="flex flex-col w-full items-center justify-center px-4 sm:px-6">
+            <div className="w-full max-w-4xl">
                 {/* Header */}
-                <div className="text-center md:text-left mb-8">
-                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                        Education
-                    </h1>
-                    <p className="text-base md:text-lg text-gray-600 dark:text-gray-300">
-                        Academic foundation and continuous learning journey
-                    </p>
+                <div className="mb-8">
+                    <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Education</h2>
+                    <p className="text-slate-500 dark:text-slate-400">Academic foundation and credentials</p>
                 </div>
 
-                {/* Main Education Card */}
-                <div className="glass-effect overflow-hidden mb-8">
+                {/* University Card */}
+                <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden bg-white dark:bg-slate-900 mb-8">
                     {/* University Header */}
-                    <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 md:p-8">
-                        <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-                            {/* University Logo */}
-                            <div className="flex-shrink-0">
-                                <div className="w-20 h-20 bg-white rounded-full p-2 shadow-lg">
-                                    <Image
-                                        src="/images/ucf.jpeg"
-                                        alt="UCF Logo"
-                                        width={64}
-                                        height={24}
-                                        className="w-full h-full object-contain rounded-full"
-                                    />
-                                </div>
+                    <div className="bg-slate-900 dark:bg-slate-800 px-6 py-6">
+                        <div className="flex items-center gap-5">
+                            <div className="flex-shrink-0 w-14 h-14 bg-white rounded-full p-1.5 overflow-hidden">
+                                <Image
+                                    src="/images/ucf.jpeg"
+                                    alt="UCF Logo"
+                                    width={48}
+                                    height={48}
+                                    className="w-full h-full object-contain rounded-full"
+                                />
                             </div>
-                            
-                            {/* University Info */}
-                            <div className="flex-1 text-center md:text-left">
-                                <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                            <div>
+                                <h3 className="text-lg font-semibold text-white">
                                     University of Central Florida
-                                </h2>
-                                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 text-white/90">
-                                    <div className="flex items-center justify-center md:justify-start gap-2">
-                                        <FaMapMarkerAlt className="text-lg" />
-                                        <span className="text-lg font-medium">Orlando, FL</span>
-                                    </div>
-                                    <div className="flex items-center justify-center md:justify-start gap-2">
-                                        <FaCalendarAlt className="text-lg" />
-                                        <span className="text-lg font-medium">2018 - 2023</span>
-                                    </div>
+                                </h3>
+                                <div className="flex flex-wrap gap-3 text-sm text-slate-300 dark:text-slate-400 mt-1">
+                                    <span>Orlando, FL</span>
+                                    <span>2018 — 2023</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* Degree Information */}
-                    <div className="p-6 md:p-8">
-                        <div className="flex items-center gap-3 mb-6">
-                            <FaGraduationCap className="text-2xl text-blue-600 dark:text-blue-400" />
-                            <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+                    {/* Degree */}
+                    <div className="p-6">
+                        <div className="flex items-center gap-2 mb-6">
+                            <FaGraduationCap className="text-lg text-slate-700 dark:text-slate-300" />
+                            <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">
                                 Bachelor of Science in Computer Science
                             </h3>
                         </div>
-                        
+
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             {/* Coursework */}
                             <div>
-                                <div className="flex items-center gap-3 mb-4">
-                                    <FaBook className="text-xl text-green-600 dark:text-green-400" />
-                                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                                        Relevant Coursework
-                                    </h4>
-                                </div>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                                    Relevant Coursework
+                                </h4>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
                                     {coursework.map((course, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-                                            <span className="text-sm text-gray-600 dark:text-gray-300">
-                                                {course}
-                                            </span>
+                                            <span className="w-1 h-1 bg-slate-400 dark:bg-slate-500 rounded-full flex-shrink-0"></span>
+                                            <span className="text-sm text-slate-600 dark:text-slate-400">{course}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -159,69 +106,48 @@ const Education = () => {
 
                             {/* Acknowledgments */}
                             <div>
-                                <div className="flex items-center gap-3 mb-4">
-                                    <FaAward className="text-xl text-yellow-600 dark:text-yellow-400" />
-                                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                                        Acknowledgments
-                                    </h4>
-                                </div>
-                                <div className="space-y-2">
-                                    {acknowledgments.map((ack, index) => (
-                                        <div key={index} className="flex items-center gap-2">
-                                            <div className="w-2 h-2 bg-yellow-500 rounded-full flex-shrink-0"></div>
-                                            <span className="text-sm text-gray-600 dark:text-gray-300">
-                                                {ack}
-                                            </span>
-                                        </div>
-                                    ))}
+                                <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                                    Recognition
+                                </h4>
+                                <div className="flex items-center gap-2">
+                                    <span className="w-1 h-1 bg-slate-400 dark:bg-slate-500 rounded-full flex-shrink-0"></span>
+                                    <span className="text-sm text-slate-600 dark:text-slate-400">Multiple Dean&apos;s List Recognition</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Additional Information Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {/* Additional Info */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                     {/* Certifications */}
-                    <div className="glass-subtle p-6">
-                        <div className="flex items-center gap-3 mb-4">
-                            <FaCertificate className="text-xl text-purple-600 dark:text-purple-400" />
-                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
+                        <div className="flex items-center gap-2 mb-4">
+                            <FaCertificate className="text-sm text-slate-600 dark:text-slate-400" />
+                            <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide">
                                 Certifications
                             </h4>
                         </div>
                         <div className="space-y-3">
                             {certifications.map((cert, index) => (
-                                <div key={index} className="border-l-2 border-purple-200 dark:border-purple-800 pl-3">
-                                    <h5 className="text-sm font-medium text-gray-900 dark:text-white">
-                                        {cert.name}
-                                    </h5>
-                                    <p className="text-xs text-gray-500 dark:text-gray-400">
-                                        {cert.provider} • {cert.credential}
-                                    </p>
+                                <div key={index} className="border-l-2 border-slate-200 dark:border-slate-700 pl-3">
+                                    <p className="text-sm font-medium text-slate-900 dark:text-slate-200">{cert.name}</p>
+                                    <p className="text-xs text-slate-400 dark:text-slate-500">{cert.provider}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
 
                     {/* Languages */}
-                    <div className="glass-subtle p-6">
-                        <div className="flex items-center gap-3 mb-4">
-                            <FaLanguage className="text-xl text-blue-600 dark:text-blue-400" />
-                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                                Languages
-                            </h4>
-                        </div>
+                    <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
+                        <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                            Languages
+                        </h4>
                         <div className="space-y-3">
                             {languages.map((lang, index) => (
                                 <div key={index} className="flex items-center justify-between">
-                                    <div className="flex items-center gap-2">
-                                        <span className="text-lg">{lang.flag}</span>
-                                        <span className="text-sm font-medium text-gray-900 dark:text-white">
-                                            {lang.name}
-                                        </span>
-                                    </div>
-                                    <span className="text-xs px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full">
+                                    <span className="text-sm text-slate-700 dark:text-slate-300">{lang.name}</span>
+                                    <span className="text-xs px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded font-medium">
                                         {lang.level}
                                     </span>
                                 </div>
@@ -229,21 +155,16 @@ const Education = () => {
                         </div>
                     </div>
 
-                    {/* Extracurricular Activities */}
-                    <div className="glass-subtle p-6 md:col-span-2 lg:col-span-1">
-                        <div className="flex items-center gap-3 mb-4">
-                            <FaUsers className="text-xl text-green-600 dark:text-green-400" />
-                            <h4 className="text-lg font-semibold text-gray-900 dark:text-white">
-                                Extracurricular
-                            </h4>
-                        </div>
+                    {/* Extracurricular */}
+                    <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
+                        <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                            Activities
+                        </h4>
                         <div className="space-y-2">
                             {extracurriculars.map((activity, index) => (
                                 <div key={index} className="flex items-center gap-2">
-                                    <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-                                    <span className="text-sm text-gray-600 dark:text-gray-300">
-                                        {activity}
-                                    </span>
+                                    <span className="w-1 h-1 bg-slate-400 dark:bg-slate-500 rounded-full flex-shrink-0"></span>
+                                    <span className="text-sm text-slate-600 dark:text-slate-400">{activity}</span>
                                 </div>
                             ))}
                         </div>

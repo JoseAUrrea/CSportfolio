@@ -1,34 +1,31 @@
 "use client"
 
 import { useRef, useState, useEffect } from 'react';
-import { FaQuoteLeft, FaExternalLinkAlt, FaStar } from 'react-icons/fa';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ReviewCard = ({ name, review, link }: { name: string; review: string; link: string }) => {
     return (
         <div 
-            className="flex flex-col glass-subtle rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 p-6 h-[350px] hover:shadow-2xl cursor-pointer overflow-hidden w-[320px] sm:w-[360px] md:w-[500px] lg:w-[600px] xl:w-[700px] flex-shrink-0 snap-center transition-all duration-300 hover:scale-[1.02] group" 
+            className="flex flex-col border border-slate-200 dark:border-slate-700 rounded-lg p-6 h-[350px] bg-white dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-600 cursor-pointer overflow-hidden w-[320px] sm:w-[360px] md:w-[500px] lg:w-[600px] xl:w-[700px] flex-shrink-0 snap-center transition-colors duration-200 group" 
             onClick={() => window.open(link, "_blank")}
             style={{ minWidth: '320px' }}
         >
-            {/* Header with quote icon and company name */}
-            <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center space-x-2">
-                    <FaQuoteLeft className="text-blue-500 dark:text-blue-400 text-lg" />
-                    <p className="text-lg font-bold text-gray-900 dark:text-white">{name}</p>
-                </div>
-                <FaExternalLinkAlt className="text-gray-400 dark:text-gray-500 text-sm group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-200" />
+            {/* Header */}
+            <div className="flex items-start justify-between mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+                <p className="text-base font-semibold text-slate-900 dark:text-slate-100">{name}</p>
+                <FaExternalLinkAlt className="text-slate-300 dark:text-slate-600 text-xs group-hover:text-slate-500 dark:group-hover:text-slate-400 transition-colors duration-200" />
             </div>
 
             {/* Review text */}
             <div className="flex-1 overflow-y-auto">
-                <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300 pr-2">
+                <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400 pr-2">
                     {review}
                 </p>
             </div>
 
-            {/* Footer with gradient */}
-            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+            {/* Footer */}
+            <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+                <p className="text-xs text-slate-400 dark:text-slate-500 text-center">
                     Click to view full profile
                 </p>
             </div>
@@ -42,15 +39,15 @@ const ScrollIndicator = ({ currentIndex, totalItems, onScrollTo }: {
     onScrollTo: (index: number) => void;
 }) => {
     return (
-        <div className="flex gap-3 justify-center mt-6">
+        <div className="flex gap-2 justify-center mt-6">
             {Array.from({ length: totalItems }).map((_, index) => (
                 <button
                     key={index}
                     onClick={() => onScrollTo(index)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
                         index === currentIndex 
-                            ? 'bg-gradient-to-r from-blue-500 to-purple-500 w-8 shadow-lg' 
-                            : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 w-2'
+                            ? 'bg-slate-900 dark:bg-slate-100 w-6' 
+                            : 'bg-slate-300 dark:bg-slate-600 hover:bg-slate-400 dark:hover:bg-slate-500 w-1.5'
                     }`}
                     aria-label={`Go to review ${index + 1}`}
                 />
@@ -97,11 +94,10 @@ const Reviews = () => {
             const cardWidth = container.scrollWidth / reviews.length;
             const containerWidth = container.clientWidth;
             
-            // Center the card within the container
             const scrollLeft = (index * cardWidth) - (containerWidth / 2) + (cardWidth / 2);
             
             container.scrollTo({
-                left: Math.max(0, scrollLeft), // Ensure we don't scroll to negative values
+                left: Math.max(0, scrollLeft),
                 behavior: 'smooth'
             });
         }
@@ -123,7 +119,6 @@ const Reviews = () => {
         const container = scrollContainerRef.current;
         if (!container) return;
 
-        // Center the first card initially
         const centerFirstCard = () => {
             const cardWidth = container.scrollWidth / reviews.length;
             const containerWidth = container.clientWidth;
@@ -135,10 +130,8 @@ const Reviews = () => {
             const cardWidth = container.scrollWidth / reviews.length;
             const containerWidth = container.clientWidth;
             
-            // Calculate which card is currently centered
             const scrollCenter = container.scrollLeft + (containerWidth / 2);
             
-            // Find the closest card to the center
             let closestIndex = 0;
             let minDistance = Infinity;
             
@@ -155,7 +148,6 @@ const Reviews = () => {
             updateScrollState();
         };
 
-        // Center the first card on mount
         centerFirstCard();
         
         container.addEventListener('scroll', handleScroll);
@@ -165,25 +157,21 @@ const Reviews = () => {
     }, [reviews.length]);
 
     return (
-        <div className="flex flex-col w-full items-center justify-center px-4">
-            <div className="w-full max-w-6xl">
+        <div className="flex flex-col w-full items-center justify-center px-4 sm:px-6">
+            <div className="w-full max-w-4xl">
                 {/* Header */}
-                <div className="text-center md:text-left">
-                    <h1 className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                        Reviews & Testimonials
-                    </h1>
-                    <p className="text-sm md:text-lg text-gray-600 dark:text-gray-300 mt-2">
-                        What colleagues and companies say about my work
-                    </p>
+                <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">Testimonials</h3>
+                    <p className="text-sm text-slate-500 dark:text-slate-400">What colleagues and collaborators say</p>
                 </div>
 
                 {/* Reviews Container */}
-                <div className="w-screen -mx-4 overflow-hidden">
+                <div className="overflow-hidden -mx-4 sm:-mx-6">
                     <div className="w-full items-center justify-center">
                         <div className="relative w-full max-w-[1000px] md:max-w-[1200px] mx-auto md:mx-0 p-2">
                             <div 
                                 ref={scrollContainerRef}
-                                className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth p-4"
+                                className="flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth p-4"
                                 style={{ 
                                     scrollbarWidth: 'none', 
                                     msOverflowStyle: 'none',
@@ -196,21 +184,13 @@ const Reviews = () => {
                                 ))}
                             </div>
                             
-                            {/* Scroll indicators */}
                             <ScrollIndicator 
                                 currentIndex={currentIndex} 
                                 totalItems={reviews.length} 
                                 onScrollTo={scrollToIndex}
                             />
                         </div>
-                        
-
                     </div>
-
-                    {/* Scroll hint for mobile */}
-                    {/* <div className="lg:hidden mt-4 text-sm text-gray-500 dark:text-gray-400 text-center">
-                        ← Swipe to see more reviews →
-                    </div> */}
                 </div>
             </div>
         </div>
