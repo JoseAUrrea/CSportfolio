@@ -26,19 +26,17 @@ const Technologies = ({ techList }: TechListTypes) => {
     ];
 
     return (
-        <div className="flex flex-col w-full items-center justify-center px-4 sm:px-6">
-            <div className="w-full max-w-4xl">
+        <div className="flex flex-col w-full gap-4 md:gap-8">
                 {/* Header */}
-                <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Technologies & Skills</h2>
-                    <p className="text-slate-500 dark:text-slate-400">Tools and technologies I work with</p>
-                </div>
+                    <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">
+                        Technologies & Skills
+                    </h2>
 
                 {/* Categories */}
                 <div className="space-y-6">
                     {techCategories.map((category, index) => (
                         <div key={index} className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
-                            <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                            <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">
                                 {category.title}
                             </h3>
                             <div className="flex flex-wrap gap-2">
@@ -54,7 +52,6 @@ const Technologies = ({ techList }: TechListTypes) => {
                         </div>
                     ))}
                 </div>
-            </div>
         </div>
     );
 };

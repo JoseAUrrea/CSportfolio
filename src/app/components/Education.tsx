@@ -45,18 +45,14 @@ const Education = () => {
     ];
 
     return (
-        <div className="flex flex-col w-full items-center justify-center px-4 sm:px-6">
-            <div className="w-full max-w-4xl">
-                {/* Header */}
-                <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Education</h2>
-                    <p className="text-slate-500 dark:text-slate-400">Academic foundation and credentials</p>
-                </div>
+        <div className="flex flex-col w-full gap-4 md:gap-8">
+            {/* Header */}
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">Education</h2>
 
                 {/* University Card */}
-                <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden bg-white dark:bg-slate-900 mb-8">
+                <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden bg-white dark:bg-slate-900">
                     {/* University Header */}
-                    <div className="bg-slate-900 dark:bg-slate-800 px-6 py-6">
+                    <div className="bg-slate-100 dark:bg-slate-800 px-6 py-6">
                         <div className="flex items-center gap-5">
                             <div className="flex-shrink-0 w-14 h-14 bg-white rounded-full p-1.5 overflow-hidden">
                                 <Image
@@ -68,10 +64,10 @@ const Education = () => {
                                 />
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold text-white">
+                                <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
                                     University of Central Florida
                                 </h3>
-                                <div className="flex flex-wrap gap-3 text-sm text-slate-300 dark:text-slate-400 mt-1">
+                                <div className="flex flex-wrap gap-3 text-sm text-slate-500 dark:text-slate-400 mt-1">
                                     <span>Orlando, FL</span>
                                     <span>2018 — 2023</span>
                                 </div>
@@ -81,7 +77,7 @@ const Education = () => {
 
                     {/* Degree */}
                     <div className="p-6">
-                        <div className="flex items-center gap-2 mb-6">
+                        <div className="flex items-center gap-2">
                             <FaGraduationCap className="text-lg text-slate-700 dark:text-slate-300" />
                             <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100">
                                 Bachelor of Science in Computer Science
@@ -91,7 +87,7 @@ const Education = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                             {/* Coursework */}
                             <div>
-                                <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                                <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">
                                     Relevant Coursework
                                 </h4>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
@@ -106,7 +102,7 @@ const Education = () => {
 
                             {/* Acknowledgments */}
                             <div>
-                                <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                                <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">
                                     Recognition
                                 </h4>
                                 <div className="flex items-center gap-2">
@@ -124,7 +120,7 @@ const Education = () => {
                     <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
                         <div className="flex items-center gap-2 mb-4">
                             <FaCertificate className="text-sm text-slate-600 dark:text-slate-400" />
-                            <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide">
+                            <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100">
                                 Certifications
                             </h4>
                         </div>
@@ -140,7 +136,7 @@ const Education = () => {
 
                     {/* Languages */}
                     <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
-                        <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                        <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">
                             Languages
                         </h4>
                         <div className="space-y-3">
@@ -157,7 +153,7 @@ const Education = () => {
 
                     {/* Extracurricular */}
                     <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
-                        <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                        <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">
                             Activities
                         </h4>
                         <div className="space-y-2">
@@ -170,7 +166,6 @@ const Education = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     );
 };

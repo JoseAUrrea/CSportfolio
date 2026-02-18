@@ -2,12 +2,8 @@ import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
     return (
-        <div className="flex flex-col w-full items-center justify-center px-4 sm:px-6">
-            <div className="w-full max-w-4xl">
-                <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Contact</h2>
-                    <p className="text-slate-500 dark:text-slate-400">Get in touch</p>
-                </div>
+        <div className="flex flex-col w-full gap-4 md:gap-8">
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">Contact</h2>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {/* Email */}
@@ -50,7 +46,6 @@ const Contact = () => {
                         <p className="text-sm text-slate-500 dark:text-slate-400">JoseAUrrea</p>
                     </a>
                 </div>
-            </div>
         </div>
     );
 };

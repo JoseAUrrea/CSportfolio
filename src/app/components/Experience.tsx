@@ -131,16 +131,12 @@ const Experience = () => {
     const currentExperience = experienceData[activeRole as keyof typeof experienceData];
 
     return (
-        <div className="flex flex-col w-full items-center justify-center px-4 sm:px-6">
-            <div className="w-full max-w-4xl">
+        <div className="flex flex-col w-full gap-4 md:gap-8">
                 {/* Header */}
-                <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Experience</h2>
-                    <p className="text-slate-500 dark:text-slate-400">Professional work history and responsibilities</p>
-                </div>
+                <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">Experience</h2>
 
                 {/* Role Tabs */}
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-2">
                     {Object.keys(experienceData).map((role) => (
                         <button
                             key={role}
@@ -160,11 +156,11 @@ const Experience = () => {
                 </div>
 
                 {/* Experience Card */}
-                <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden bg-white dark:bg-slate-900">
+                <div className="border border-slate-300 dark:border-slate-700 rounded-lg overflow-hidden bg-white dark:bg-slate-900">
                     {/* Header */}
-                    <div className="bg-slate-900 dark:bg-slate-800 px-6 py-6">
-                        <h3 className="text-lg font-semibold text-white mb-1">{activeRole}</h3>
-                        <div className="flex flex-wrap gap-4 text-sm text-slate-300 dark:text-slate-400">
+                    <div className="bg-slate-100 dark:bg-slate-800 border-b border-slate-400 dark:border-slate-700 px-6 py-6">
+                        <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">{activeRole}</h3>
+                        <div className="flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
                             <span>{currentExperience.company}</span>
                             <span>{currentExperience.dates[0]} — {currentExperience.dates[1]}</span>
                         </div>
@@ -179,7 +175,7 @@ const Experience = () => {
 
                     {/* Categories */}
                     <div className="p-6 space-y-3">
-                        <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-4">
+                        <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">
                             Responsibilities & Achievements
                         </h3>
                         {Object.entries(currentExperience.sections).map(([categoryTitle, categoryData]) => (
@@ -195,7 +191,7 @@ const Experience = () => {
 
                     {/* Technologies */}
                     <div className="px-6 pb-6">
-                        <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100 uppercase tracking-wide mb-3">
+                        <h3 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-3">
                             Technologies
                         </h3>
                         <div className="flex flex-wrap gap-2">
@@ -210,7 +206,6 @@ const Experience = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     );
 };

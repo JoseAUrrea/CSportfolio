@@ -6,14 +6,14 @@ import { FaExternalLinkAlt } from 'react-icons/fa';
 const ReviewCard = ({ name, review, link }: { name: string; review: string; link: string }) => {
     return (
         <div 
-            className="flex flex-col border border-slate-200 dark:border-slate-700 rounded-lg p-6 h-[350px] bg-white dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-600 cursor-pointer overflow-hidden w-[320px] sm:w-[360px] md:w-[500px] lg:w-[600px] xl:w-[700px] flex-shrink-0 snap-center transition-colors duration-200 group" 
+            className="flex flex-col border border-slate-300 dark:border-slate-700 rounded-lg p-6 h-[350px] bg-blue-50 dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-600 cursor-pointer overflow-hidden w-[320px] sm:w-[360px] md:w-[500px] lg:w-[600px] xl:w-[700px] flex-shrink-0 snap-center transition-colors duration-200 group" 
             onClick={() => window.open(link, "_blank")}
             style={{ minWidth: '320px' }}
         >
             {/* Header */}
-            <div className="flex items-start justify-between mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
-                <p className="text-base font-semibold text-slate-900 dark:text-slate-100">{name}</p>
-                <FaExternalLinkAlt className="text-slate-300 dark:text-slate-600 text-xs group-hover:text-slate-500 dark:group-hover:text-slate-400 transition-colors duration-200" />
+            <div className="flex items-start justify-between mb-4 pb-3 border-b border-slate-400 dark:border-slate-800">
+                <p className="text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100">{name}</p>
+                <FaExternalLinkAlt className="text-slate-500 dark:text-slate-600 text-sm md:text-base group-hover:text-slate-500 dark:group-hover:text-slate-400 transition-colors duration-200" />
             </div>
 
             {/* Review text */}
@@ -25,7 +25,7 @@ const ReviewCard = ({ name, review, link }: { name: string; review: string; link
 
             {/* Footer */}
             <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
-                <p className="text-xs text-slate-400 dark:text-slate-500 text-center">
+                <p className="text-xs text-slate-500 dark:text-slate-500 text-center">
                     Click to view full profile
                 </p>
             </div>
@@ -157,18 +157,20 @@ const Reviews = () => {
     }, [reviews.length]);
 
     return (
-        <div className="flex flex-col w-full items-center justify-center px-4 sm:px-6">
-            <div className="w-full max-w-4xl">
+        <div className="flex flex-col w-full items-center justify-center">
+            <div className="w-full max-w">
                 {/* Header */}
-                <div className="mb-6">
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">Testimonials</h3>
+                <div className="">
+                    <h3 className="text-lg md:text-lg font-semibold text-slate-900 dark:text-slate-100 mt-2">
+                        Testimonials
+                    </h3>
                     <p className="text-sm text-slate-500 dark:text-slate-400">What colleagues and collaborators say</p>
                 </div>
 
                 {/* Reviews Container */}
                 <div className="overflow-hidden -mx-4 sm:-mx-6">
                     <div className="w-full items-center justify-center">
-                        <div className="relative w-full max-w-[1000px] md:max-w-[1200px] mx-auto md:mx-0 p-2">
+                        <div className="relative w-full max-w-[1000px] md:max-w-[1270px] mx-auto md:mx-0 p-2">
                             <div 
                                 ref={scrollContainerRef}
                                 className="flex gap-5 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth p-4"

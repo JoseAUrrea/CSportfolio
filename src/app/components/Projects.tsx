@@ -107,16 +107,14 @@ const Projects = () => {
     }, [activeCategory]);
 
     return (
-        <div className="flex flex-col w-full items-center justify-center px-4 sm:px-6">
-            <div className="w-full max-w-4xl">
-                {/* Header */}
-                <div className="mb-8">
-                    <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Projects</h2>
-                    <p className="text-slate-500 dark:text-slate-400">A selection of development work across different domains</p>
-                </div>
+        <div className="flex flex-col w-full gap-4 md:gap-8">
+            {/* Header */}
+            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">
+                Projects
+            </h2>
 
                 {/* Category Tabs */}
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-2">
                     {categories.map((category) => (
                         <button
                             key={category}
@@ -168,7 +166,6 @@ const Projects = () => {
                         ))}
                     </div>
                 </div>
-            </div>
         </div>
     );
 };

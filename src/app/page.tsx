@@ -5,6 +5,8 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
 import Reviews from './components/Reviews';
+import Image from 'next/image';
+import { FaLocationDot } from 'react-icons/fa6';
 
 export default function Home() {
 
@@ -15,27 +17,40 @@ export default function Home() {
               ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 overflow-x-hidden">
+    <div className="min-h-screen bg-white dark:bg-black overflow-x-hidden max-w-7xl mx-auto px-4">
       {/* Hero Section */}
-      <section className="pt-28 pb-16 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          <div className="space-y-6">
-            <div>
-              <p className="text-sm font-medium tracking-widest uppercase text-slate-500 dark:text-slate-400 mb-3">
-                Senior Full Stack Engineer
-              </p>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 leading-tight tracking-tight">
-                Alejandro Urrea
-              </h1>
-            </div>
-            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+      <section className="pt-24 md:pt-28 mb-8">
+        <div className="flex flex-col w-full items-start md:items-center justify-center space-y-6">
+              <div className="flex flex-row gap-4 items-start">
+                <div className="w-16 h-16 md:w-28 md:h-28 flex-shrink-0 rounded-full overflow-hidden border-2 border-slate-100 dark:border-slate-700">
+                    <Image 
+                        src="/images/grad3.jpeg" 
+                        alt="Alejandro Urrea" 
+                        width={112} 
+                        height={112} 
+                        className="w-full h-full object-cover" 
+                    />
+                </div>
+                <div className="flex flex-col gap-1 md:gap-2">
+                  <p className="text-sm md:text-lg font-medium md:tracking-widest uppercase text-slate-500 dark:text-slate-400">
+                    Senior Full Stack Engineer
+                  </p>
+                  <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-slate-900 dark:text-slate-100 leading-tight tracking-tight">
+                    Alejandro Urrea
+                  </h1>
+                </div>
+              </div>
+            <p className="text-base md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
               I build intelligent, scalable solutions that bridge cutting-edge AI 
               technology and real-world business impact — from multi-agent AI systems 
               to robust full-stack applications.
             </p>
+            <p className="text-base text-slate-600 dark:text-slate-400 flex items-center gap-2">
+              <FaLocationDot /> Los Angeles, CA
+            </p>
 
             {/* Navigation */}
-            <nav className="flex flex-wrap gap-2 pt-4">
+            {/* <nav className="flex flex-wrap gap-2 pt-4">
               {[
                 { href: "#about", label: "About" },
                 { href: "#experience", label: "Experience" },
@@ -52,22 +67,24 @@ export default function Home() {
                   {label}
                 </a>
               ))}
-            </nav>
-          </div>
+            </nav> */}
+
         </div>
       </section>
 
       <div className="section-divider" />
 
+
+
       {/* About Section */}
-      <section id="about" className="section-spacing-tight bg-slate-50 dark:bg-slate-900/50">
+      <section id="about" className="section-spacing-tight">
         <About />
       </section>
 
       {/* Reviews Section */}
-      <section id="reviews" className="section-spacing-tight">
+      {/* <section id="reviews" className="section-spacing-tight">
         <Reviews />
-      </section>
+      </section> */}
 
       <div className="section-divider" />
 
@@ -79,7 +96,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Technologies Section */}
-      <section id="technologies" className="section-spacing bg-slate-50 dark:bg-slate-900/50">
+      <section id="technologies" className="section-spacing">
         <Technologies techList={techs} />
       </section>
 
@@ -93,7 +110,7 @@ export default function Home() {
       <div className="section-divider" />
 
       {/* Education Section */}
-      <section id="education" className="section-spacing bg-slate-50 dark:bg-slate-900/50">
+      <section id="education" className="section-spacing">
         <Education />
       </section>
 
