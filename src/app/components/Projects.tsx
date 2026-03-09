@@ -5,6 +5,7 @@ import { FaGithub, FaLock } from "react-icons/fa";
 
 const projectsData = {
     "Full Stack": [
+        { id: "multi-agent-analyst", title: "Autonomous Analyst", description: "Multi-agent AI system where four specialized agents (Retriever, Analyst, Reporter, Critic) collaborate to answer business questions. With self-evaluation loops, real-time streaming traces, and vector search via Pinecone", type: "Full Stack / AI", technologies: ["TypeScript", "React", "Express", "LangGraph", "OpenAI", "Pinecone", "Tailwind"], image: "/images/multi-agent-analyst.jpg", githubUrl: "https://github.com/JoseAUrrea/Multi-Agent-Autonomous-Analyst", isPrivate: false },
         { id: "compete", title: "Compete", description: "Virtual Sports & Social Media App", type: "Database & Backend", technologies: ["NextJS", "React", "TypeScript", "Tailwind CSS", "MySQL", "AWS"], image: "/images/compete.jpeg", githubUrl: null, isPrivate: true },
         { id: "ecommerce", title: "The Market", description: "Ecommerce Website", type: "Full Stack", technologies: ["Python", "Django", "HTML", "SQLite", "CSS", "JavaScript"], image: "/images/ecommerce.jpg", githubUrl: "https://github.com/JoseAUrrea/ecommerce", isPrivate: false },
         { id: "pt-gpt", title: "Personal Trainer GPT", description: "AI Personal Trainer", type: "Backend & Database", technologies: ["MERN stack"], image: "/images/pt-gpt2.jpeg", githubUrl: "https://github.com/JoseAUrrea/pt-gpt", isPrivate: false }
