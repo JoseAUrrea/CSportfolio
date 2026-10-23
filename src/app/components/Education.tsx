@@ -45,14 +45,14 @@ const Education = () => {
     ];
 
     return (
-        <div className="flex flex-col w-full gap-4 md:gap-8">
+        <div className="flex flex-col w-full gap-6 md:gap-8">
             {/* Header */}
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">Education</h2>
+            <div><p className="eyebrow mb-2">Foundation</p><h2 className="section-title">Education</h2></div>
 
                 {/* University Card */}
-                <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden bg-white dark:bg-slate-900">
+                <div className="surface-card overflow-hidden">
                     {/* University Header */}
-                    <div className="bg-slate-100 dark:bg-slate-800 px-6 py-6">
+                    <div className="bg-[#f0f3ff] dark:bg-slate-800 px-6 py-6">
                         <div className="flex items-center gap-5">
                             <div className="flex-shrink-0 w-14 h-14 bg-white rounded-full p-1.5 overflow-hidden">
                                 <Image
@@ -117,7 +117,7 @@ const Education = () => {
                 {/* Additional Info */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                     {/* Certifications */}
-                    <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
+                    <div className="surface-card p-5">
                         <div className="flex items-center gap-2 mb-4">
                             <FaCertificate className="text-sm text-slate-600 dark:text-slate-400" />
                             <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100">
@@ -135,7 +135,7 @@ const Education = () => {
                     </div>
 
                     {/* Languages */}
-                    <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
+                    <div className="surface-card p-5">
                         <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">
                             Languages
                         </h4>
@@ -152,7 +152,7 @@ const Education = () => {
                     </div>
 
                     {/* Extracurricular */}
-                    <div className="border border-slate-200 dark:border-slate-700 rounded-lg p-5 bg-white dark:bg-slate-900">
+                    <div className="surface-card p-5">
                         <h4 className="text-base font-semibold text-slate-900 dark:text-slate-100 mb-4">
                             Activities
                         </h4>

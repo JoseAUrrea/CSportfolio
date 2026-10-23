@@ -83,10 +83,10 @@ const CategoryCard = ({ title, items, isOpen, onToggle }: {
     onToggle: () => void; 
 }) => {
     return (
-        <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden bg-white dark:bg-slate-800">
+        <div className="surface-card overflow-hidden">
             <button
                 onClick={onToggle}
-                className="w-full px-5 py-4 flex items-center justify-between hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors duration-150"
+                className="w-full px-5 py-4 flex items-center justify-between hover:bg-[#f5f7ff] dark:hover:bg-slate-700/50 transition-colors duration-150"
             >
                 <div className="flex items-center gap-3">
                     <h3 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{title}</h3>
@@ -131,9 +131,9 @@ const Experience = () => {
     const currentExperience = experienceData[activeRole as keyof typeof experienceData];
 
     return (
-        <div className="flex flex-col w-full gap-4 md:gap-8">
+        <div className="flex flex-col w-full gap-6 md:gap-8">
                 {/* Header */}
-                <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">Experience</h2>
+                <div><p className="eyebrow mb-2">Work history</p><h2 className="section-title">Experience</h2></div>
 
                 {/* Role Tabs */}
                 <div className="flex flex-wrap gap-2">
@@ -146,7 +146,7 @@ const Experience = () => {
                             }}
                             className={`text-sm px-4 py-2 rounded-md font-medium transition-all duration-200 ${
                                 activeRole === role
-                                    ? 'bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900'
+                                    ? 'bg-[#2855d9] text-white'
                                     : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700'
                             }`}
                         >
@@ -156,9 +156,9 @@ const Experience = () => {
                 </div>
 
                 {/* Experience Card */}
-                <div className="border border-slate-300 dark:border-slate-700 rounded-lg overflow-hidden bg-white dark:bg-slate-900">
+                <div className="surface-card overflow-hidden">
                     {/* Header */}
-                    <div className="bg-slate-100 dark:bg-slate-800 border-b border-slate-400 dark:border-slate-700 px-6 py-6">
+                    <div className="bg-[#f0f3ff] dark:bg-slate-800 border-b border-[#d9e1ff] dark:border-slate-700 px-6 py-6">
                         <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-1">{activeRole}</h3>
                         <div className="flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
                             <span>{currentExperience.company}</span>

@@ -2,15 +2,15 @@ import Reviews from "./Reviews";
 
 const About = () => {
     return (
-        <div className="flex flex-col w-full gap-4 md:gap-8">
-            <h2 className="text-xl md:text-2xl font-bold text-slate-900 dark:text-slate-100">About</h2>
+        <div className="flex flex-col w-full gap-6 md:gap-8">
+            <div><p className="eyebrow mb-2">Profile</p><h2 className="section-title">A practical engineer with range.</h2></div>
             {/* Background */}
             <div>
-                <div className="flex flex-col w-full space-y-5 justify-center items-center">
-                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                        I&apos;m a <span className="font-medium text-blue-500 dark:text-slate-200">Senior Full Stack Engineer</span> with 4+ years of experience building production platforms, designing multi-agent AI systems, and delivering cloud infrastructure serving thousands of users — across the full stack from database architecture and serverless backends to responsive frontends.
+                <div className="grid gap-5 lg:grid-cols-2">
+                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed lg:pr-6">
+                        I&apos;m a <span className="font-semibold text-[#2855d9] dark:text-blue-300">Senior Full Stack Engineer</span> with 4+ years of experience building production platforms, designing multi-agent AI systems, and delivering cloud infrastructure serving thousands of users — across the full stack from database architecture and serverless backends to responsive frontends.
                     </p>
-                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed lg:border-l lg:border-slate-200 lg:pl-8 dark:lg:border-slate-700">
                         At <span className="font-medium text-slate-900 dark:text-slate-200">AlterCall</span>, I built the core platform from the ground up — now serving over 2,000 users — using React, Node.js, and AWS, while designing multi-agent AI architectures with Python, LangGraph, and OpenAI. Beyond the product, I developed internal tools like a commission engine and lead delegation system to streamline company operations.
                     </p>
                 </div>
@@ -28,7 +28,7 @@ const About = () => {
             </div> */}
 
             {/* Skills */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {[
                     { title: "Full Stack", desc: "NextJS, React, NodeJS, TypeScript, Cloud Architecture" },
                     { title: "AI / ML", desc: "Multi-agent systems, LangGraph, OpenAI, Python" },
@@ -37,7 +37,7 @@ const About = () => {
                 ].map((skill) => (
                     <div
                         key={skill.title}
-                        className="border-l-2 border-slate-900 dark:border-slate-100 pl-4"
+                        className="surface-card border-l-[3px] border-l-[#2855d9] p-4"
                     >
                         <h3 className="text-md font-semibold text-slate-900 dark:text-slate-100 mb-1">{skill.title}</h3>
                         <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{skill.desc}</p>
