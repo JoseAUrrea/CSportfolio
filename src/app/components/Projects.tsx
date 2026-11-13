@@ -5,6 +5,7 @@ import { FaExternalLinkAlt, FaLock } from "react-icons/fa";
 
 const projectsData = {
     "Full Stack": [
+        { id: "enterprise-ai-platform", title: "Production AI Platform", description: "Selected professional work across durable multi-agent orchestration, event-driven document systems, retrieval evaluation, secure Azure delivery, and full-stack product engineering.", type: "Confidential · Selected work", technologies: ["TypeScript", "Python", "Next.js", "Azure", "PostgreSQL", "Cosmos DB", "OpenAI", "Anthropic"], image: null, githubUrl: null, isPrivate: true, confidentialityLabel: "Confidential" },
         { id: "multi-agent-analyst", title: "Autonomous Analyst", description: "Multi-agent AI system where four specialized agents (Retriever, Analyst, Reporter, Critic) collaborate to answer business questions. With self-evaluation loops, real-time streaming traces, and vector search via Pinecone", type: "Full Stack / AI", technologies: ["TypeScript", "React", "Express", "LangGraph", "OpenAI", "Pinecone", "Tailwind"], image: "/images/multi-agent-analyst.jpg", githubUrl: "https://github.com/JoseAUrrea/Multi-Agent-Autonomous-Analyst", isPrivate: false },
         { id: "compete", title: "Compete", description: "Virtual Sports & Social Media App", type: "Database & Backend", technologies: ["NextJS", "React", "TypeScript", "Tailwind CSS", "MySQL", "AWS"], image: "/images/compete.jpeg", githubUrl: null, isPrivate: true },
         { id: "ecommerce", title: "The Market", description: "Ecommerce Website", type: "Full Stack", technologies: ["Python", "Django", "HTML", "SQLite", "CSS", "JavaScript"], image: "/images/ecommerce.jpg", githubUrl: "https://github.com/JoseAUrrea/ecommerce", isPrivate: false },
@@ -32,16 +33,25 @@ const ProjectCard = ({ project }: { project: any }) => {
         <article className="surface-card overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-[#b9c7ff] hover:shadow-lg hover:shadow-slate-200/50 dark:hover:shadow-none flex flex-col">
             {/* Image */}
             <div className="relative h-44 overflow-hidden bg-slate-100 dark:bg-slate-800">
-                <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 hover:scale-[1.03]"
-                />
+                {project.image ? (
+                    <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-500 hover:scale-[1.03]"
+                    />
+                ) : (
+                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-950 via-[#182b59] to-[#2855d9]">
+                        <div className="text-center text-white">
+                            <p className="text-xs uppercase tracking-[0.3em] text-blue-200">Systems in practice</p>
+                            <p className="mt-3 text-lg font-semibold tracking-wide">AI <span className="text-blue-300">·</span> DATA <span className="text-blue-300">·</span> CLOUD</p>
+                        </div>
+                    </div>
+                )}
                 {project.isPrivate && (
                     <div className="absolute top-3 right-3 bg-slate-900/80 text-white px-2 py-1 rounded text-xs font-medium flex items-center gap-1">
                         <FaLock className="w-2.5 h-2.5" />
-                        Private
+                        {project.confidentialityLabel || "Private"}
                     </div>
                 )}
             </div>

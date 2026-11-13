@@ -4,6 +4,7 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
+import Reviews from './components/Reviews';
 import Image from 'next/image';
 import { FaArrowDown, FaArrowUpRightFromSquare, FaLocationDot } from 'react-icons/fa6';
 
@@ -16,26 +17,26 @@ export default function Home() {
         <div className="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-7">
-                <div className="w-12 h-12 flex-shrink-0 rounded-full overflow-hidden ring-2 ring-white shadow-sm dark:ring-slate-800">
+                {/* <div className="w-16 h-16 flex-shrink-0 rounded-full overflow-hidden ring-2 ring-white shadow-sm dark:ring-slate-800">
                     <Image 
-                        src="/images/grad3.jpeg" 
+                        src="/images/alejandro.jpeg" 
                         alt="Alejandro Urrea" 
-                        width={48}
-                        height={48}
-                        className="w-full h-full object-cover" 
+                        width={100}
+                        height={100}
+                        className="w-full h-full object-cover object-top" 
                     />
-                </div>
-                <span className="eyebrow">Senior full-stack engineer</span>
+                </div> */}
+                <span className="eyebrow">Alejandro Urrea - Senior full-stack engineer</span>
             </div>
             <h1 className="max-w-3xl text-4xl sm:text-6xl md:text-7xl font-bold text-slate-900 dark:text-slate-100 leading-[1.02] tracking-[-.055em]">
-              Building useful systems at the edge of AI and software.
+              Building production systems at scale.
             </h1>
             <p className="mt-7 text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
-              I&apos;m Alejandro Urrea — a full-stack engineer who turns complex workflows into reliable, human-centered products.
+              I&apos;m a senior full-stack engineer building production AI systems, cloud infrastructure, and products for complex workflows.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 text-sm font-medium text-slate-600 dark:text-slate-400">
               <span className="flex items-center gap-2"><FaLocationDot className="text-[#2855d9]" /> Los Angeles, CA</span>
-              <a href="#projects" className="inline-flex items-center gap-2 text-slate-900 dark:text-slate-100 hover:text-[#2855d9] transition-colors">View selected work <FaArrowDown className="text-xs" /></a>
+              <a href="#experience" className="inline-flex items-center gap-2 text-slate-900 dark:text-slate-100 hover:text-[#2855d9] transition-colors">Explore featured work <FaArrowDown className="text-xs" /></a>
             </div>
           </div>
           <a href="#contact" className="hidden lg:inline-flex group items-center gap-3 text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-[#2855d9] transition-colors">
@@ -80,6 +81,13 @@ export default function Home() {
       {/* Education Section */}
       <section id="education" className="section-spacing">
         <Education />
+      </section>
+
+      <div className="section-divider" />
+
+      {/* Recommendations Section */}
+      <section id="recommendations" className="section-spacing">
+        <Reviews />
       </section>
 
       <div className="section-divider" />

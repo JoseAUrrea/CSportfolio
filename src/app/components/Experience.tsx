@@ -133,7 +133,58 @@ const Experience = () => {
     return (
         <div className="flex flex-col w-full gap-6 md:gap-8">
                 {/* Header */}
-                <div><p className="eyebrow mb-2">Work history</p><h2 className="section-title">Experience</h2></div>
+                <div><p className="eyebrow mb-2">Selected work & professional experience</p><h2 className="section-title">Work</h2></div>
+
+                <article className="surface-card overflow-hidden">
+                    <div className="bg-[#f0f3ff] dark:bg-slate-800 border-b border-[#d9e1ff] dark:border-slate-700 px-6 py-5">
+                        <p className="eyebrow mb-2">Confidential product · Selected professional work</p>
+                        <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Production AI Platform</h3>
+                    </div>
+                    <div className="px-6 py-5">
+                        <p className="max-w-4xl text-slate-600 dark:text-slate-400 leading-relaxed">
+                            Built and operated core systems for a production AI application, working across the data path, model runtime, product experience, and cloud foundation. Shared at a high level to respect confidentiality.
+                        </p>
+                        <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+                            {[
+                                {
+                                    title: "AI orchestration",
+                                    detail: "Designed planner, parallel-worker, and merger workflows with durable checkpoints, restart recovery, streaming progress, and support for multiple model providers.",
+                                },
+                                {
+                                    title: "Document data systems",
+                                    detail: "Built event-driven processing and retrieval with format-aware extraction, queue-based scheduling, idempotent publishing, reconciliation, and recovery paths.",
+                                },
+                                {
+                                    title: "Evaluation & retrieval",
+                                    detail: "Created answer-key and retrieval-quality evaluations; used automated gates and staged rollouts to validate AI features before production release.",
+                                },
+                                {
+                                    title: "Secure cloud delivery",
+                                    detail: "Designed Azure infrastructure in Bicep and delivery workflows with identity-based deployment, private networking, health checks, and monitoring.",
+                                },
+                                {
+                                    title: "Full-stack product work",
+                                    detail: "Delivered application capabilities across Next.js interfaces, TypeScript APIs, PostgreSQL and Cosmos DB, and real-time job and notification workflows.",
+                                },
+                            ].map((item) => (
+                                <div key={item.title} className="rounded-lg border border-slate-200 bg-slate-50/70 p-4 dark:border-slate-700 dark:bg-slate-800/60">
+                                    <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-100">{item.title}</h4>
+                                    <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{item.detail}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="mt-5 flex flex-wrap gap-2">
+                            {["TypeScript", "Python", "Next.js", "Azure", "PostgreSQL", "Cosmos DB", "OpenAI", "Anthropic"].map((tech) => (
+                                <span key={tech} className="inline-flex items-center rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-mono text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">{tech}</span>
+                            ))}
+                        </div>
+                    </div>
+                </article>
+
+                <div className="pt-2">
+                    <p className="eyebrow mb-2">Employment history</p>
+                    <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Roles</h3>
+                </div>
 
                 {/* Role Tabs */}
                 <div className="flex flex-wrap gap-2">

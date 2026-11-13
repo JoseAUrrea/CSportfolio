@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import useOutsideClick from "../hooks/useOutsideClick";
+import Image from "next/image";
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const NavBar = () => {
 
     const links = [
         { href: "#about", label: "About" },
-        { href: "#experience", label: "Experience" },
+        { href: "#experience", label: "Work" },
         { href: "#technologies", label: "Skills" },
         { href: "#projects", label: "Projects" },
         { href: "#education", label: "Education" },
@@ -30,8 +31,20 @@ const NavBar = () => {
             <div className="max-w-[80rem] mx-auto px-4 md:px-6">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <Link href="/" className="text-base font-bold text-slate-900 dark:text-slate-100 tracking-[-.04em]">
-                        AU<span className="text-[#2855d9]">.</span>
+                    <Link
+                        href="/"
+                        aria-label="Alejandro Urrea — home"
+                        className="flex h-10 w-10 overflow-hidden rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#2855d9]"
+                        >
+                        <Image
+                            src="/images/alejandro.jpeg"
+                            alt="AU"
+                            width={100}
+                            height={100}
+                            priority
+                            className="h-full w-full object-cover object-top"
+                        />
+                        {/* AU<span className="text-[#2855d9]">.</span> */}
                     </Link>
 
                     {/* Desktop nav links */}
@@ -49,14 +62,14 @@ const NavBar = () => {
 
                     {/* Social links + mobile menu */}
                     <div className="flex items-center gap-3">
-                        <a
+                        {/* <a
                             target="_blank"
                             href="https://www.linkedin.com/in/jose-urrea-profile"
                             className="text-black dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200"
                             aria-label="LinkedIn"
                         >
                             <CiLinkedin className="w-5 md:w-7 md:h-7 h-5" />
-                        </a>
+                        </a> */}
                         <a
                             target="_blank"
                             href="https://www.github.com/JoseAUrrea/"

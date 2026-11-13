@@ -1,52 +1,45 @@
-import Reviews from "./Reviews";
-
 const About = () => {
+    const strengths = [
+        {
+            title: "AI systems",
+            desc: "Multi-agent orchestration, tool use, retrieval, model integrations, and evaluation-driven releases.",
+        },
+        {
+            title: "Data workflows",
+            desc: "Event-driven processing, document extraction, search, queueing, and reliable recovery paths.",
+        },
+        {
+            title: "Cloud engineering",
+            desc: "Azure and AWS architecture, infrastructure as code, identity, networking, and observability.",
+        },
+        {
+            title: "Product delivery",
+            desc: "End-to-end ownership across APIs, databases, responsive interfaces, testing, and deployment.",
+        },
+    ];
+
     return (
         <div className="flex flex-col w-full gap-6 md:gap-8">
-            <div><p className="eyebrow mb-2">Profile</p><h2 className="section-title">A practical engineer with range.</h2></div>
-            {/* Background */}
             <div>
-                <div className="grid gap-5 lg:grid-cols-2">
-                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed lg:pr-6">
-                        I&apos;m a <span className="font-semibold text-[#2855d9] dark:text-blue-300">Senior Full Stack Engineer</span> with 4+ years of experience building production platforms, designing multi-agent AI systems, and delivering cloud infrastructure serving thousands of users — across the full stack from database architecture and serverless backends to responsive frontends.
-                    </p>
-                    <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed lg:border-l lg:border-slate-200 lg:pl-8 dark:lg:border-slate-700">
-                        At <span className="font-medium text-slate-900 dark:text-slate-200">AlterCall</span>, I built the core platform from the ground up — now serving over 2,000 users — using React, Node.js, and AWS, while designing multi-agent AI architectures with Python, LangGraph, and OpenAI. Beyond the product, I developed internal tools like a commission engine and lead delegation system to streamline company operations.
-                    </p>
-                </div>
+                <p className="eyebrow mb-2">Profile</p>
+                <h2 className="section-title">I work across the whole system.</h2>
             </div>
-
-            {/* Mission — blockquote accent */}
-            {/* <div className="border-l-2 border-slate-900 dark:border-slate-100 pl-6 py-1 max-w-2xl">
-                <p className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                    Mission:
+            <div className="grid gap-5 lg:grid-cols-2">
+                <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed lg:pr-6">
+                    I&apos;m Alejandro, a senior full-stack engineer with 4+ years of experience building production software. My work spans AI applications, cloud infrastructure, data systems, and user-facing products.
                 </p>
-                <p className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed italic">
-                    To drive innovation through technology, deliver impactful solutions that solve real-world problems, 
-                    and continuously grow as an engineer while contributing to forward-thinking teams.
+                <p className="text-base md:text-lg text-slate-600 dark:text-slate-400 leading-relaxed lg:border-l lg:border-slate-200 lg:pl-8 dark:lg:border-slate-700">
+                    I like taking a system from its hardest technical question to a dependable product: shaping the architecture, building the data and service layers, measuring AI quality, and making sure the result can be operated in production.
                 </p>
-            </div> */}
-
-            {/* Skills */}
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                {[
-                    { title: "Full Stack", desc: "NextJS, React, NodeJS, TypeScript, Cloud Architecture" },
-                    { title: "AI / ML", desc: "Multi-agent systems, LangGraph, OpenAI, Python" },
-                    { title: "Cloud", desc: "AWS (Lambda, RDS, SQS, EC2, S3, Cognito), Docker, CI/CD" },
-                    { title: "Collaboration", desc: "Agile, Scrum, cross-functional team leadership" },
-                ].map((skill) => (
-                    <div
-                        key={skill.title}
-                        className="surface-card border-l-[3px] border-l-[#2855d9] p-4"
-                    >
-                        <h3 className="text-md font-semibold text-slate-900 dark:text-slate-100 mb-1">{skill.title}</h3>
-                        <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{skill.desc}</p>
+                {strengths.map((strength) => (
+                    <div key={strength.title} className="surface-card border-l-[3px] border-l-[#2855d9] p-4">
+                        <h3 className="text-md font-semibold text-slate-900 dark:text-slate-100 mb-1">{strength.title}</h3>
+                        <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{strength.desc}</p>
                     </div>
                 ))}
             </div>
-
-            {/* Testimonials */}
-            <Reviews />
         </div>
     );
 };
